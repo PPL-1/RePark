@@ -17,11 +17,20 @@
 			return $conn;
 	}
 	
+	/* Insert data to database menggunakan query*/
+	function insertQuery($connection, $query)
+	{
+		if ($connection->query($query) === TRUE) {
+		    echo "New record created successfully";
+		} else {
+		    echo "Error: " . $sql . "<br>" . $conn->error;
+		}
+	}
+
 	/* Untuk mengambil data dari database. Untuk aksesnya lihat di fungsi printResult */
 	function getResultFromQuery($connection, $input_query)
 	{
-		$query 	= $input_query;
-		$result = $connection -> query($query);
+		$result = $connection -> query($input_query);
 		if($result->num_rows > 0)
 		{
 			return $result;
