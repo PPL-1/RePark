@@ -2,8 +2,11 @@
 	include '../database/config.php';
 	
 	$koneksi 	= getConnection();
-	$query 		= "SELECT * FROM Instansi";
-	$result 	= getResultFromQuery($koneksi, $query);
-	printResult($result);
+	$query 		= "SELECT DISTINCT * FROM Pengaduan";
+	$kolom 		= "*";
+	$tabel		= "Instansi";
+	//$result 	= getResultFromQuery($koneksi, $query);
+	$result 	= getSelectFrom($koneksi, "*", "Pengaduan");
+	printResult($result,"Isi");
 
 ?>

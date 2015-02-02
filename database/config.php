@@ -31,18 +31,33 @@
 			echo "no result";
 		}
 	}
-	
+
+	/* Mengambil data menggunakan kolom tertentu from tabel tertentu */
+	function getSelectFrom($connection, $columnSelection, $tabelName)
+	{
+		$query 	= "SELECT ".$columnSelection." FROM ".$tabelName;
+		$result = $connection -> query($query);
+		if($result->num_rows > 0)
+		{
+			return $result;
+		}
+		else
+		{
+			echo "no result";
+		}
+	}
+
 	/* Close connection. Wajib setiap database akan di close */
 	function closeConnection($connection)
 	{
 		$connection -> close();
 	}
 
-	/* cara menampilkan hasil dari database */
-	function printResult($result)
+	/* cara menampilkan hasil dari database, sementara cuma bisa 1 kolom */
+	function printResult($result, $kolom)
 	{
 		while($row = $result->fetch_assoc()) {
-			echo $row["Nama"]."<br>";
+			echo $row[$kolom]."<br>";
 		}
 	}
 ?>
