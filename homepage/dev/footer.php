@@ -9,9 +9,13 @@
 					</form>
 				</div>
 				<div class="col-md-4 service">
-					<h5>Humbala</h5>
-					<h6>Humbala</h6>
-					<p>Lorem ipsum dolor sit amet.</p>
+					<h5>Dinas Pemakaman dan Pertamanan</h5>
+					<h6>Alamat</h6>
+					<p>Jl. Ambon No.1 A Bandung</p>
+					<h6>Telepon</h6>
+					<p>022-4231921</p>
+					<h6>E-mail</h6>
+					<p>distankam[at]bandung.go.id</p>
 				</div>
 				<div class="col-md-4 connect">
 					<h5>Kontak kami</h5>
