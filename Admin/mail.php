@@ -4,10 +4,10 @@
 		$to 		= $alamat;
 		$subject 	= $judul;
 		$message	= $isi;
-		$from		= 'From: '.$namaPengirim.' <$asalEmail>';
+		$from		= 'From: '.$namaPengirim.$asalEmail;
 		mail($to, $subject, $message, $from);
 	}
 
-	sendMail('akhmadfakhoni@gmail.com', 'Laporan Taman Jomblo', 'Banyak orang Pacaran', 'Akhmad Fakhoni', 'afld_kebumen@yahoo.co.id');
+	sendMail('akhmadfakhoni@gmail.com', 'Laporan Taman Jomblo2', 'Banyak orang Pacaran2', 'Akhmad Fakhoni', 'afld_kebumen@yahoo.co.id');
 	echo 'oke';
 ?>
