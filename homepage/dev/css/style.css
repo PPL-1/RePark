@@ -18,8 +18,28 @@ body a{
 	-o-transition:0.5s all;
 	-ms-transition:0.5s all;
 }
+.searchaduan
+{
+	margin: 15px;
+}
+.aduan
+{
+	margin: 15px;
+	background: #fff;
+}
+.container
+{
+	width: 100%;
+}
+.titlelogo
+{
+	padding-top: 30px;
+	padding-left: 100px;
+	position: relative;
+	color: #fff;
+}
 .header{
-	background:#fff;
+	background:rgba(255,255,255,0.4);
 	padding:1em;
 	position:relative;
 }
@@ -61,16 +81,18 @@ body a{
 	display:inline-block;  
 }
 .head-nav ul li a{
-	color:#668333;
+	color:#fff;
 	text-decoration:none;
 	font-size: 1.3em;
 	font-weight:400;
 	display:block;	
-	padding:0.5em 1em;	
+	padding:0.5em 0.5em;	
 	text-transform:uppercase;
 }	
 .head-nav ul li a:hover,.head-nav ul li.active a{
-	color:#3F8DA3;
+	color:#131313;
+	border-style: solid;
+    border-width: 3px;
 }
 .banner{
 	background: url(../images/banner.jpg) no-repeat center top;
