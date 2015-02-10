@@ -9,8 +9,12 @@
 					FROM Pengaduan";
 	$result 	= getResultFromQuery($koneksi, $query);
 	//printResult($result,"Isi");
-	
-	printLaporan($result);
+	if($result->num_rows > 0)
+	{
+		printLaporan($result);
+	}
+	else
+		echo "<script type='text/javascript'>alert('Data pengaduan tidak ditemukan. Periksa kembali input anda');</script>";
 	
 	closeConnection($koneksi);
 ?>

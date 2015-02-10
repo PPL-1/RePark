@@ -35,10 +35,7 @@
 		{
 			return $result;
 		}
-		else
-		{
-			echo "no result";
-		}
+		
 	}
 
 	/* Mengambil data menggunakan kolom tertentu from tabel tertentu */

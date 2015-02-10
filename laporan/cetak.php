@@ -65,11 +65,10 @@ function printLaporan($result)
 		$telepon 	= 'Telepon 	: '.$row['Telepon'].'<br>';
 		$isi 		= 'Isi 		: <br>'.$row['Isi'].'<br>';
 		$status 	= 'Status 	: '.$row['Status'];
-		$html = $html . $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status.'<hr>'.'<br>'.'<br>';
+		$html = $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status;
+		// Print text using writeHTMLCell()
+		$pdf->writeHTMLCell(0, 0, '', '', $html, 1, 1, 0, true, '', true);
 	}
-
-	// Print text using writeHTMLCell()
-	$pdf->writeHTMLCell(0, 0, '', '', $html, 1, 1, 0, true, '', true);
 
 	$pdf->Output('Laporan.pdf', 'I');
 }
