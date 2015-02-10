@@ -8,6 +8,6 @@
 		mail($to, $subject, $message, $from);
 	}
 
-	sendMail('akhmadfakhoni@gmail.com', 'Laporan Taman Jomblo2', 'Banyak orang Pacaran2', 'Akhmad Fakhoni', 'afld_kebumen@yahoo.co.id');
+	sendMail('akhmadfakhoni@gmail.com', 'Laporan Taman Pintar', 'Pinter2 semuanya di sini', 'Akhmad Fakhoni', 'afld_kebumen@yahoo.co.id');
 	echo 'oke';
 ?>
