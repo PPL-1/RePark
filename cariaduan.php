@@ -1,4 +1,6 @@
-<?php include 'header.php';
+<?php 
+	ini_set('display_errors', 1);
+	include 'header.php';
 	  require 'database/config.php';
 
 	  $conn = getConnection();
@@ -102,8 +104,12 @@
                     <h6>Oleh : Husain the Jombloers</h6>
                 </div>
                 <?php
-                	$query = "SELECT * FROM pengaduan";
+                	$query = "SELECT * FROM Pengaduan LIMIT 5";
                 	$q_result = mysqli_query($conn,$query);
+			if (!$q_result) {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
                 	$arr_adu = array();
                 	while($row = mysqli_fetch_array($q_result))
                 	{
