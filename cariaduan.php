@@ -1,13 +1,11 @@
-<<<<<<< HEAD
-<?php include 'header.php' ?>
-=======
-<?php include 'header.php';
-	  require '../../database/config.php';
+<?php 
+	ini_set('display_errors', 1);
+	include 'header.php';
+	  require 'database/config.php';
 
 	  $conn = getConnection();
 	  //test();
 	  ?>
->>>>>>> 7d8cf9d93cc9af9738018691df771bc537c43157
 
 <body>
     <!-- header -->
@@ -105,38 +103,13 @@
                     <br>
                     <h6>Oleh : Husain the Jombloers</h6>
                 </div>
-<<<<<<< HEAD
-                <div class="aduan">
-                    <h6>25 Januari 2015 | Taman Jomblo</h6>
-                    <h3>Pencurian di Taman Jomblo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam aperiam et sequi minus, rem ipsa ipsam iste amet at, molestiae voluptate saepe voluptatibus eaque quam maiores tenetur quaerat dolore.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <h6>Oleh : Husain the Jombloers</h6>
-                </div>
-                <div class="aduan">
-                    <h6>25 Januari 2015 | Taman Jomblo</h6>
-                    <h3>Pencurian di Taman Jomblo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam aperiam et sequi minus, rem ipsa ipsam iste amet at, molestiae voluptate saepe voluptatibus eaque quam maiores tenetur quaerat dolore.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <h6>Oleh : Husain the Jombloers</h6>
-                </div>
-                <div class="aduan">
-                    <h6>25 Januari 2015 | Taman Jomblo</h6>
-                    <h3>Pencurian di Taman Jomblo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam aperiam et sequi minus, rem ipsa ipsam iste amet at, molestiae voluptate saepe voluptatibus eaque quam maiores tenetur quaerat dolore.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <h6>Oleh : Husain the Jombloers</h6>
-                </div>
-=======
                 <?php
-                	$query = "SELECT * FROM pengaduan";
+                	$query = "SELECT * FROM Pengaduan LIMIT 5";
                 	$q_result = mysqli_query($conn,$query);
+			if (!$q_result) {
+    printf("Error: %s\n", mysqli_error($conn));
+    exit();
+}
                 	$arr_adu = array();
                 	while($row = mysqli_fetch_array($q_result))
                 	{
@@ -157,7 +130,6 @@
                 		<?php
                 	}
                 ?>
->>>>>>> 7d8cf9d93cc9af9738018691df771bc537c43157
                 <p style="float:left;margin:15px"><< Sebelum</p>
 				<p style="float:right;margin:15px">Sesudah >></p>
             </div>
@@ -263,9 +235,5 @@
 	</div>
  -->
     <!-- events -->
-<<<<<<< HEAD
-    <?php include 'footer.php' ?>
-=======
     <?php mysqli_close($conn);
     include 'footer.php' ?>
->>>>>>> 7d8cf9d93cc9af9738018691df771bc537c43157

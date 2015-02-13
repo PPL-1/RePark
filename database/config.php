@@ -5,6 +5,8 @@
 	$dbname		= "laportaman";
 
 	/* Inisialisasi koneksi */
+
+	//function test() {echo "test";}
 	function getConnection()
 	{
 		global $servername, $username, $password, $dbname;
@@ -35,10 +37,7 @@
 		{
 			return $result;
 		}
-		else
-		{
-			echo "no result";
-		}
+		
 	}
 
 	/* Mengambil data menggunakan kolom tertentu from tabel tertentu */
