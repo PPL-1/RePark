@@ -1,5 +1,5 @@
 <?php
-	$servername = "akhfa.in/phpmyadmin";
+	$servername = "akhfa.in";
 	$username	= "laportaman";
 	$password	= "RePark";
 	$dbname		= "laportaman";
