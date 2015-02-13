@@ -87,8 +87,20 @@
             <div class="col-md-6 contact-form">
                 <form>
                     <input type="text" placeholder="Nama Lengkap" required="">
-                    <input type="text" placeholder="Email" required="">
+                    <input type="text" placeholder="Nomor Telepon" required="">
                     <input type="text" placeholder="Judul Aduan" required="">
+                    <div class="controls" style="margin-botton:1em;font-size:18px;">
+                        <select data-placeholder="Masukkan taman" id="selectError2" data-rel="chosen">
+                            <option value=""></option>
+                              <option>Dinas Pemakaman dan Pertamanan</option>
+                              <option>Dinas Kebakaran</option>
+                              <option>Dinas Kebersihan</option>
+                              <option>Dinas Pariwisata dan Kebudayaan</option>
+                              <option>Dinas Komunikasi dan Informasi</option>                                         
+                              <option>Satpol PP</option>
+                              <option>Kepolisian</option>                                         
+                      </select>
+                    </div>
                     <textarea placeholder="Isi Aduan" required=""></textarea>
                     <input type="submit" value="Kirim">
                 </form>
