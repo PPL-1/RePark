@@ -1,3 +1,4 @@
+<?php $username =  $_GET['username'] ?>
 <?php require "header.php"; ?>
 	
 		<div class="container-fluid-full">
@@ -33,25 +34,25 @@
 						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Form Cetak Laporan</h2>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal">
+						<form class="form-horizontal" action="printdummy.php" method="GET">
 						  <fieldset>
 							<div class="control-group">
 							  <label class="control-label" for="typeahead">Nama File</label>
 							  <div class="controls">
-								<input type="text" size="35">
+								<input type="text" size="35" name="filename">
 							  </div>
 							</div>
 							<div class="control-group">
 							  <label class="control-label" for="date01">Tanggal awal</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge datepicker" id="date01" value="02/16/12">
+								<input type="date" id="date01" name="startdate" value="02/16/14">
 							  </div>
 							</div>
 
 							<div class="control-group">
 							  <label class="control-label" for="date01">Tanggal akhir</label>
 							  <div class="controls">
-								<input type="text" class="input-xlarge datepicker" id="date02" value="02/16/12">
+								<input type="date"  id="date02" name="finishdate" value="02/16/15">
 							  </div>
 							</div>
 
