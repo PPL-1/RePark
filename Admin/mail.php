@@ -40,7 +40,7 @@
 		echo "isi <p>".$isi."</p>";
 		$from		= 'From: '.$namaPengirim.' <reparkyou@gmail.com>';
 		echo "from <p>".$from."</p>";;
-		mail($to, $subject, $message, $from);
-		echo "Udah";
-		require "redirectpengaduan.php";
+		// mail($to, $subject, $message, $from);
+		// echo "Udah";
+		// require "redirectpengaduan.php";
 ?>
