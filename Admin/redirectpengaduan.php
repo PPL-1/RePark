@@ -5,6 +5,13 @@
 	$password = "RePark";
 	$dbname = "laportaman";
 
+<<<<<<< HEAD
+=======
+	$idpengaduan = $_GET["idpengaduan"];
+	$instansi = $_GET["instansi"];
+	$aing =  $_GET['aing'];
+
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 
 	// Create connection
 	$conn = new mysqli($servername, $username, $password, $dbname);
@@ -19,7 +26,11 @@
 		echo ("<script type='text/javascript'>alert('Error cuk');</script>");
 	}
 	$conn->close();
+<<<<<<< HEAD
 	header('Location: message.php');
+=======
+	header('Location: message.php?username='.$aing);
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 
  ?>
 

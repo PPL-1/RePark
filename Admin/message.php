@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?php 
 if(!isset($_COOKIE["Username"])) {
     header('Location: index.php');
@@ -5,6 +6,10 @@ if(!isset($_COOKIE["Username"])) {
     $username=$_COOKIE["Username"];
 }
 ?>
+=======
+<?php $username=$_GET['username'] ?>
+<?php $aing=$_GET['username'] ?>
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 
 <?php require "header.php"; ?>
 
@@ -113,7 +118,11 @@ $(function() {
 </script>
 
 <script>
+<<<<<<< HEAD
 function showpengaduan(id) {
+=======
+function showPengaduan(id,aing) {
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -126,7 +135,11 @@ function showpengaduan(id) {
             document.getElementById("contentpengaduan").innerHTML = xmlhttp.responseText;
         }
     }
+<<<<<<< HEAD
     xmlhttp.open("GET", "showpengaduan.php?id="+id, true);
+=======
+    xmlhttp.open("GET", "showpengaduan.php?id=" + id+"&aing="+aing, true);
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
     xmlhttp.send();
 }
 </script>

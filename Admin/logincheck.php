@@ -20,6 +20,7 @@
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
+<<<<<<< HEAD
 	    	$cookie_name = "Username";
 			$cookie_value = $pengguna;
 			setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
@@ -30,10 +31,20 @@
 		header('Location: index.php');
 	}
 	$conn->close();
+=======
+			header('Location: message.php?username='.$row['Username']);
+	    }
+	} else {
+		echo ("<script type='text/javascript'>alert('Username atau password error cuk');</script>");
+	}
+	$conn->close();
+	echo "<input type=\"hidden\" value=\"".$row['Username']."\" id=\"username\" />";
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
  ?>
 
  <script>
 $(function() {
+<<<<<<< HEAD
     function getUrlParameter(sParam) {
         var sPageURL = window.location.search.substring(1);
         var sURLVariables = sPageURL.split('&');
@@ -45,6 +56,9 @@ $(function() {
         }
     }
     var value = $("input#").val();;
+=======
+    var value = $("input#username").val();;
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
         console.log("ready!");
     var cookie = $.cookie('name');
     $.cookie('name', value);

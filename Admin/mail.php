@@ -1,4 +1,5 @@
 <?php
+<<<<<<< HEAD
 	$judul = $_POST["judul"];
 	$isi = $_POST["isi"];
 	$namaPengirim = $_POST["namapengirim"];
@@ -32,14 +33,23 @@
 		}
 
 		$conn->close();
+=======
+	ini_set('display_errors', 1);
+	function sendMail($alamat, $judul, $isi, $namaPengirim)
+	{
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 		$to 		= $alamat;
 		echo "alamat <p>".$alamat."</p>";
 		$subject 	= $judul;
 		echo "subject <p>".$subject."</p>";
 		$message	= $isi;
+<<<<<<< HEAD
 		echo "isi <p>".$isi."</p>";
 		$from		= 'From: '.$namaPengirim.' <reparkyou@gmail.com>';
 		echo "from <p>".$from."</p>";;
+=======
+		$from		= 'From: '.$namaPengirim.'<reparkyou@gmail.com>';
+>>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 		mail($to, $subject, $message, $from);
 		echo "Udah";
 		require "redirectpengaduan.php";
