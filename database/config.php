@@ -32,11 +32,7 @@
 	/* Untuk mengambil data dari database. Untuk aksesnya lihat di fungsi printResult */
 	function getResultFromQuery($connection, $input_query)
 	{
-<<<<<<< HEAD
-		echo $input_query;
-=======
 		//echo $input_query;
->>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 		$result = $connection->query($input_query);
 		if($result->num_rows > 0)
 		{

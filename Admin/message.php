@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php 
 if(!isset($_COOKIE["Username"])) {
     header('Location: index.php');
@@ -6,10 +5,6 @@ if(!isset($_COOKIE["Username"])) {
     $username=$_COOKIE["Username"];
 }
 ?>
-=======
-<?php $username=$_GET['username'] ?>
-<?php $aing=$_GET['username'] ?>
->>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 
 <?php require "header.php"; ?>
 

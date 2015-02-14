@@ -51,18 +51,12 @@
 							</ul>		
 						</div>
 						
-<<<<<<< HEAD
 						<form class=\"replyForm\"method=\"post\" action=\"mail.php\">
 						<input name=\"idpengaduan\" type=\"hidden\" value=\"".$row["Id"]."\">
 						<input name=\"judul\" type=\"hidden\" value=\"".$row["Judul"]."\">
 						<input name=\"isi\" type=\"hidden\" value=\"".$row["Isi"]."\">
 						<input name=\"namapengirim\" type=\"hidden\" value=\"".$row["Nama"]."\">
 
-=======
-						<form class=\"replyForm\"method=\"get\" action=\"redirectpengaduan.php\">
-						<input name=\"idpengaduan\" type=\"hidden\" value=\"".$row["Id"]."\">
-						<input name=\"aing\" type=\"hidden\" value=\"".$_GET['aing']."\">
->>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
 						");
 						if ($row["Status"]=="Pending")
 						{

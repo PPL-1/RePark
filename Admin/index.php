@@ -74,11 +74,7 @@
                             </div>
                             <div class="clearfix"></div>
 
-<<<<<<< HEAD
-
                             ?>
-=======
->>>>>>> 8fd45e4cd168b7bfee389a8cc44383f359402f20
                             <label class="remember" for="remember">
                                 <input type="checkbox" id="remember" />Remember me</label>
 
