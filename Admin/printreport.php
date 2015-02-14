@@ -34,14 +34,8 @@
 						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Form Cetak Laporan</h2>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="printdummy.php" method="GET">
+						<form class="form-horizontal" action="../laporan/index.php" method="GET">
 						  <fieldset>
-							<div class="control-group">
-							  <label class="control-label" for="typeahead">Nama File</label>
-							  <div class="controls">
-								<input type="text" size="35" name="filename">
-							  </div>
-							</div>
 							<div class="control-group">
 							  <label class="control-label" for="date01">Tanggal awal</label>
 							  <div class="controls">
