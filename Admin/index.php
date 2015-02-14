@@ -74,7 +74,6 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            ?>
                             <label class="remember" for="remember">
                                 <input type="checkbox" id="remember" />Remember me</label>
 
