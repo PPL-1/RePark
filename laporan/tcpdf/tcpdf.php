@@ -1,4 +1,5 @@
 <?php
+ini_set('max_execution_time', 0);
 //============================================================+
 // File name   : tcpdf.php
 // Version     : 6.2.6
