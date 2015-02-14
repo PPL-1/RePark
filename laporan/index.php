@@ -2,11 +2,13 @@
 	ini_set('display_errors', 1);
 	require '../database/config.php';
 	require ('cetak.php');
-	
+	$startdate = $_GET['startdate'];
+	$finishdate = $_GET['finishdate'];
+
 	$koneksi 	= getConnection();
 	//$query 		= "UPDATE `Pengaduan` SET `Tanggal`='2015-02-26 00:00:01' WHERE (mod(Id,2) = 0)";
 	$query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-					FROM Pengaduan  WHERE Tanggal BETWEEN '2015-03-15 00:00:01' AND '2015-03-20 00:00:01'";
+					FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."'";
 	$result 	= getResultFromQuery($koneksi, $query);
 
 	if($result->num_rows > 0)
