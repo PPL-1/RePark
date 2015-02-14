@@ -13,7 +13,17 @@ function printLaporan($result)
 
 	$pdf->SetPrintHeader(false);
 	$pdf->SetPrintFooter(false);
+
 	$pdf->AddPage();
+	$judul_laporan 	= '<br><h1 align="center" style="font-size: 250%;">Laporan Pengaduan</h1> <br>';
+	$judul_laporan.= '<h1 align="center"> Dinas Pemakaman dan Pertamanan </h1><br>';
+	$pdf->writeHTMLCell(0, 0, '', '', $judul_laporan, 0, 1, 0, true, '', true);
+	$gambar 		= '<br><br><br><br><br><br><div align="center"><img src="../images/logo.png" alt="Bandung-logo" style="width:382px;height:320px"></div>';
+	$pdf->writeHTMLCell(0, 0, '', '', $gambar, 0, 1, 0, true, '', true);
+	$bawah	= '<br><br><br><br><h1 align="center" style="font-size: 200%;"> BANDUNG </h1>';
+	$pdf->writeHTMLCell(0, 0, '', '', $bawah, 0, 1, 0, true, '', true);
+
+	
 
 	$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 	$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);

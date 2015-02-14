@@ -4,7 +4,7 @@
 	require ('cetak.php');
 	
 	$koneksi 	= getConnection();
-	//$query 		= "INSERT INTO Instansi VALUES ('namaa', 'emaill', 'passwordd')";
+	
 	$query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
 					FROM Pengaduan LIMIT 5";
 	$result 	= getResultFromQuery($koneksi, $query);
