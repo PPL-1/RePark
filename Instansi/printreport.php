@@ -1,11 +1,4 @@
-<?php 
-if(!isset($_COOKIE["Username"])) {
-    header('Location: index.php');
-} else {
-    $username=$_COOKIE["Username"];
-}
-?>
-
+<?php $username =  $_GET['username'] ?>
 <?php require "header.php"; ?>
 	
 		<div class="container-fluid-full">

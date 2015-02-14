@@ -1,7 +1,7 @@
 <?php
-	$servername = "akhfa.in";
-	$username	= "laportaman";
-	$password	= "RePark";
+	$servername = "localhost";
+	$username	= "root";
+	$password	= "";
 	$dbname		= "laportaman";
 
 	/* Inisialisasi koneksi */
@@ -32,12 +32,12 @@
 	/* Untuk mengambil data dari database. Untuk aksesnya lihat di fungsi printResult */
 	function getResultFromQuery($connection, $input_query)
 	{
-		echo $input_query;
-		$result = $connection->query($input_query);
+		$result = $connection -> query($input_query);
 		if($result->num_rows > 0)
 		{
 			return $result;
 		}
+		
 	}
 
 	/* Mengambil data menggunakan kolom tertentu from tabel tertentu */
