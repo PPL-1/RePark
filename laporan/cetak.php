@@ -14,7 +14,7 @@ function printLaporan($result)
 	$pdf->SetTitle('Laporan Pengaduan');
 
 	// set default header data
-	$pdf->SetHeaderData(PDF_HEADER_LOGO, PDF_HEADER_LOGO_WIDTH, PDF_HEADER_TITLE.' 001', PDF_HEADER_STRING, array(0,64,255), array(0,64,128));
+	$pdf->SetHeaderData('', 0, 'Dinas Pemakaman dan Pertamanan', 'Kota Bandung', array(0,64,255), array(0,64,128));
 	$pdf->setFooterData(array(0,64,0), array(0,64,128));
 
 
@@ -26,12 +26,12 @@ function printLaporan($result)
 	$pdf->SetDefaultMonospacedFont(PDF_FONT_MONOSPACED);
 
 	// set margins
-	$pdf->SetMargins(PDF_MARGIN_LEFT, PDF_MARGIN_TOP, PDF_MARGIN_RIGHT);
+	$pdf->SetMargins(PDF_MARGIN_LEFT, 20, PDF_MARGIN_RIGHT);
 	$pdf->SetHeaderMargin(PDF_MARGIN_HEADER);
 	$pdf->SetFooterMargin(PDF_MARGIN_FOOTER);
 
 	// set auto page breaks
-	$pdf->SetAutoPageBreak(TRUE, PDF_MARGIN_BOTTOM);
+	$pdf->SetAutoPageBreak(TRUE, 13);
 
 	// set image scale factor
 	$pdf->setImageScale(PDF_IMAGE_SCALE_RATIO);
