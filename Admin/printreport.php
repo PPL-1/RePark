@@ -41,7 +41,7 @@ if(!isset($_COOKIE["Username"])) {
 						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Form Cetak Laporan</h2>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="../laporan/index.php" method="GET">
+						<form class="form-horizontal" action="../laporan/index.php" target="_blank"method="GET">
 						  <fieldset>
 							<div class="control-group">
 							  <label class="control-label" for="date01">Tanggal awal</label>

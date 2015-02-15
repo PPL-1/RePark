@@ -11,7 +11,7 @@ html,body{
 	background:#F3EEEA;
 	font-family: 'Montserrat', sans-serif;
 }
-body a{
+body a{	
     transition:0.5s all;
 	-webkit-transition:0.5s all;
 	-moz-transition:0.5s all;
@@ -782,15 +782,15 @@ width: 100%;
 .contact form input[type="submit"] {
 	border: none;
 	outline: none;
-	color: #3A8AA0;
-	background: none;
+	color: #ffffff;
+	background: #4999AF;
 	font-size: 18px;
 	font-weight: 600;
 	margin: .6em 0;
 	-webkit-appearance: none;
 }
 .contact form input[type="submit"]:hover{
-	color: #F1715E;
+	color: #ffffff;
 	transition: .5s all;
 	-webkit-transition: .5s all;
 	-moz-transition: .5s all;

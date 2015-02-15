@@ -2,12 +2,6 @@
 	<div class="footer">
 		<div class="container">
 			<div class="footer-top">
-				<div class="col-md-4 news">
-					<h4>Daftarkan email anda</h4>
-					<form>
-						<input type="submit" value="EMAIL SIGNUP">
-					</form>
-				</div>
 				<div class="col-md-4 service">
 					<h5>Dinas Pemakaman dan Pertamanan</h5>
 					<h6>Alamat</h6>
@@ -17,7 +11,7 @@
 					<h6>E-mail</h6>
 					<p>distankam[at]bandung.go.id</p>
 				</div>
-				<div class="col-md-4 connect">
+				<div class="col-md-offset-4 col-md-4 connect">
 					<h5>Kontak kami</h5>
 						<ul>
 							<li><a href="#"><i class="fb"></i></a></li>

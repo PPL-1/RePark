@@ -72,7 +72,7 @@
         <div class="row">
             <div class="col-lg-9">
                 <div class="searchaduan">
-                    <label for="Cari"> Cari Aduan</label>
+                    <label for="Cari"> Detail Aduan</label>
                     <input type="text">
                 </div>
                 <div class="aduan">

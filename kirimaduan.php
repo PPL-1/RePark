@@ -16,31 +16,12 @@
 
                     <div class="head-part">
                         <ul>
-                            <li><a href="#">Menu1 |</a>
+                            <li><a href="admin/index.php">Login sebagai Admin</a>
                             </li>
-                            <li><a href="#">Menu2 |</a>
-                            </li>
-                            <li><a href="contact.php">Menu3</a>
+                            <li><a href="instansi/index.php">Login sebagai Instansi</a>
                             </li>
                             <li>
-                                <!-- start search-->
-                                <div class="search-box">
-                                    <div id="sb-search" class="sb-search">
-                                        <form>
-                                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-                                            <input class="sb-search-submit" type="submit" value="">
-                                            <span class="sb-icon-search"> </span>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- search-scripts -->
-                                <script src="js/classie.js"></script>
-                                <script src="js/uisearch.js"></script>
-                                <script>
-                                new UISearch(document.getElementById('sb-search'));
-                                </script>
-                                <!-- //search-scripts -->
-                            </li>
+
                         </ul>
                     </div>
                     <div class="clearfix"> </div>
@@ -55,7 +36,7 @@
                         </li>
                         <li class="active"><a href="kirimaduan.php">Kirim Aduan</a>
                         </li>
-                        <li><a href="cariaduan.php">Cari Aduan</a>
+                        <li><a href="cariaduan.php">Daftar Aduan</a>
                         </li>
                         <li><a href="daftartaman.php">Daftar Taman</a>
                         </li>
@@ -84,23 +65,11 @@
     <div class="contact">
         <div class="container">
             <h3>Formulir Pengaduan</h3>
-            <div class="col-md-6 contact-form">
+            <div class="col-md-6 contact-form news">
                 <form>
                     <input type="text" placeholder="Nama Lengkap" required="">
                     <input type="text" placeholder="Nomor Telepon" required="">
                     <input type="text" placeholder="Judul Aduan" required="">
-                    <div class="controls" style="margin-botton:1em;font-size:18px;">
-                        <select data-placeholder="Masukkan taman" id="selectError2" data-rel="chosen">
-                            <option value=""></option>
-                              <option>Dinas Pemakaman dan Pertamanan</option>
-                              <option>Dinas Kebakaran</option>
-                              <option>Dinas Kebersihan</option>
-                              <option>Dinas Pariwisata dan Kebudayaan</option>
-                              <option>Dinas Komunikasi dan Informasi</option>                                         
-                              <option>Satpol PP</option>
-                              <option>Kepolisian</option>                                         
-                      </select>
-                    </div>
                     <textarea placeholder="Isi Aduan" required=""></textarea>
                     <input type="submit" value="Kirim">
                 </form>
@@ -108,12 +77,12 @@
             <div class="col-md-6 contact-info">
                 <h3>Kirimkan Aduan Anda</h3>
                 <p>
-	                Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkkan Bandung Juara
+                    Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkkan Bandung Juara
                 </p>
                 <h6>Dinas Pertamanan dan Pemakaman
-					<span>Jalan Ganesha 10 Kelurahan Lebak Siliwangi Kecamatan Coblong</span>
-						Kota Bandung
-					</h6>
+                    <span>Jalan Ganesha 10 Kelurahan Lebak Siliwangi Kecamatan Coblong</span>
+                        Kota Bandung
+                    </h6>
                 <p>Telephone: +1 234 567 9871
                     <span>FAX: +1 234 567 9871</span> E-mail: <a href="sevenoaks0@example@example.com">mail@user.com</a>
                 </p>

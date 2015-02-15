@@ -13,7 +13,7 @@
 	    die("Connection failed: " . $conn->connect_error);
 	} 
 
-	$sql = "SELECT * FROM Pengaduan LIMIT 0,30";
+	$sql = "SELECT * FROM Pengaduan ORDER BY Tanggal DESC LIMIT 0,30";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    // output data of each row
