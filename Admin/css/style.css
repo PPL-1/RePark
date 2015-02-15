@@ -77,6 +77,11 @@
 	color: #fff;
 }
 
+.label-important
+{
+	float:right;
+}
+
 .greenLight,
 .greenLight [class="box-header"],
 .greenLight.box,
