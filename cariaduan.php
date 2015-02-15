@@ -1,10 +1,9 @@
 <?php 
 	ini_set('display_errors', 1);
 	include 'header.php';
-	  require 'database/config.php';
-
-	  $conn = getConnection();
-	  //test();
+    require 'database/config.php';
+	
+    $conn = getConnection();
 	  ?>
 
 <body>
@@ -93,15 +92,6 @@
                 <div class="searchaduan">
                     <label for="Cari"> Cari Aduan</label>
                     <input type="text">
-                </div>
-                <div class="aduan">
-                    <h6>25 Januari 2015 | Taman Jomblo</h6>
-                    <h3>Pencurian di Taman Jomblo</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero totam aperiam et sequi minus, rem ipsa ipsam iste amet at, molestiae voluptate saepe voluptatibus eaque quam maiores tenetur quaerat dolore.</p>
-                    <br>
-                    <br>
-                    <br>
-                    <h6>Oleh : Husain the Jombloers</h6>
                 </div>
                 <?php
                 	$query = "SELECT * FROM Pengaduan LIMIT 5";

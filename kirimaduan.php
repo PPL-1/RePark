@@ -1,4 +1,10 @@
-<?php include 'header.php' ?>
+<?php 
+    ini_set('display_errors', 1);
+    include 'header.php';
+    require 'database/config.php';
+
+    $conn = getConnection();
+?>
 
 <body>
     <!-- header -->
@@ -91,14 +97,26 @@
                     <input type="text" placeholder="Judul Aduan" required="">
                     <div class="controls" style="margin-botton:1em;font-size:18px;">
                         <select data-placeholder="Masukkan taman" id="selectError2" data-rel="chosen">
-                            <option value=""></option>
-                              <option>Dinas Pemakaman dan Pertamanan</option>
-                              <option>Dinas Kebakaran</option>
-                              <option>Dinas Kebersihan</option>
-                              <option>Dinas Pariwisata dan Kebudayaan</option>
-                              <option>Dinas Komunikasi dan Informasi</option>                                         
-                              <option>Satpol PP</option>
-                              <option>Kepolisian</option>                                         
+                        <?php 
+                            $query = "SELECT NamaTaman FROM Taman";
+                            $q_result = mysqli_query($conn,$query);
+                            if (!$q_result) 
+                            {
+                               printf("Error: %s\n", mysqli_error($conn));
+                                exit();
+                            }
+                            $arr_taman = array();
+                            while($row = mysqli_fetch_array($q_result))
+                            {
+                                array_push($arr_taman, $row);
+                            }                            
+                            foreach ($arr_taman as $row) 
+                            {
+                        ?>
+                              <option><?php echo $row['NamaTaman'] ?></option>
+                        <?php   
+                            }
+                        ?>
                       </select>
                     </div>
                     <textarea placeholder="Isi Aduan" required=""></textarea>
@@ -108,7 +126,7 @@
             <div class="col-md-6 contact-info">
                 <h3>Kirimkan Aduan Anda</h3>
                 <p>
-	                Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkkan Bandung Juara
+	                Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkan Bandung Juara
                 </p>
                 <h6>Dinas Pertamanan dan Pemakaman
 					<span>Jalan Ganesha 10 Kelurahan Lebak Siliwangi Kecamatan Coblong</span>
@@ -124,4 +142,7 @@
         </div>
     </div>
     <!-- contact -->
-    <?php include 'footer.php' ?>
+    <?php 
+        mysqli_close($conn);
+        include 'footer.php'; 
+    ?>
