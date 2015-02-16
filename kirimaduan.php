@@ -22,9 +22,9 @@
 
                     <div class="head-part">
                         <ul>
-                            <li><a href="admin/index.php">Login sebagai Admin</a>
+                            <li><a href="Admin/index.php">Login sebagai Admin</a>
                             </li>
-                            <li><a href="instansi/index.php">Login sebagai Instansi</a>
+                            <li><a href="Instansi/index.php">Login sebagai Instansi</a>
                             </li>
                             <li>
 
