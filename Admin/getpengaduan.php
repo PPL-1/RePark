@@ -18,9 +18,9 @@
 	if ($result->num_rows > 0) {
 	    // output data of each row
 	    while($row = $result->fetch_assoc()) {
-	    	if ($row["Status"]=="Pending")
+	    	if ($row["Status"]=="Proses Moderasi")
 	    	{
-	    		$status = "<span class=\"label label-warning\">Pending</span>";
+	    		$status = "<span class=\"label label-warning\">Proses Moderasi</span>";
 	    	}
 	    	if ($row["Status"]=="Terkirim")
 	    	{
