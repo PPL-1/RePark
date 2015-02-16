@@ -73,7 +73,7 @@ if(!isset($_COOKIE["Username"])) {
 </div>
 <!--/fluid-row-->
 
-<div class="modal hide fade" id="myModal">
+<!-- <div class="modal hide fade" id="myModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
         <h3>Settings</h3>
@@ -85,7 +85,7 @@ if(!isset($_COOKIE["Username"])) {
         <a href="#" class="btn" data-dismiss="modal">Close</a>
         <a href="#" class="btn btn-primary">Save changes</a>
     </div>
-</div>
+</div> -->
 
 <div class="clearfix"></div>
 <script src="js/jquery-1.9.1.min.js"></script>
