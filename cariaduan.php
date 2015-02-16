@@ -22,31 +22,12 @@
 
                     <div class="head-part">
                         <ul>
-                            <li><a href="#">Menu1 |</a>
-                            </li>
-                            <li><a href="#">Menu2 |</a>
-                            </li>
-                            <li><a href="contact.php">Menu3</a>
-                            </li>
-                            <li>
-                                <!-- start search-->
-                                <div class="search-box">
-                                    <div id="sb-search" class="sb-search">
-                                        <form>
-                                            <input class="sb-search-input" placeholder="Enter your search term..." type="search" name="search" id="search">
-                                            <input class="sb-search-submit" type="submit" value="">
-                                            <span class="sb-icon-search"> </span>
-                                        </form>
-                                    </div>
-                                </div>
-                                <!-- search-scripts -->
-                                <script src="js/classie.js"></script>
-                                <script src="js/uisearch.js"></script>
-                                <script>
-                                new UISearch(document.getElementById('sb-search'));
-                                </script>
-                                <!-- //search-scripts -->
-                            </li>
+                        <li><a href="admin/index.php">Login sebagai Admin</a>
+                        </li>
+                        <li><a href="instansi/index.php">Login sebagai Instansi</a>
+                        </li>
+                        <li>
+
                         </ul>
                     </div>
                     <div class="clearfix"> </div>
@@ -61,7 +42,7 @@
                         </li>
                         <li><a href="kirimaduan.php">Kirim Aduan</a>
                         </li>
-                        <li class="active"><a href="cariaduan.php">Cari Aduan</a>
+                        <li class="active"><a href="cariaduan.php">Daftar Aduan</a>
                         </li>
                         <li><a href="daftartaman.php">Daftar Taman</a>
                         </li>
@@ -81,7 +62,7 @@
                 <!-- script-for-nav -->
             </div>
             <div class="banner-info1">
-                <h2>Cari aduan</h2>
+                <h2>Daftar aduan</h2>
             </div>
         </div>
     </div>

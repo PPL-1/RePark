@@ -13,15 +13,12 @@
                 </div>
                 <div class="head-part">
                     <ul>
-                        <li><a href="#">Menu1 |</a>
+                        <li><a href="admin/index.php">Login sebagai Admin</a>
                         </li>
-                        <li><a href="#">Menu2 |</a>
-                        </li>
-                        <li><a href="contact.php">Menu3</a>
+                        <li><a href="instansi/index.php">Login sebagai Instansi</a>
                         </li>
                         <li>
-                            <!-- start search-->
-                            <div class="search-box">
+<!--                             <div class="search-box">
                                 <div id="sb-search" class="sb-search">
                                     <form>
                                         <input class="sb-search-input" placeholder="Tulis yang akan anda cari..." type="search" name="search" id="search">
@@ -30,13 +27,12 @@
                                     </form>
                                 </div>
                             </div>
-                            <!-- search-scripts -->
                             <script src="js/classie.js"></script>
                             <script src="js/uisearch.js"></script>
                             <script>
                             new UISearch(document.getElementById('sb-search'));
                             </script>
-                            <!-- //search-scripts -->
+ -->                            
                         </li>
                     </ul>
                 </div>
@@ -52,7 +48,7 @@
                     </li>
                     <li><a href="kirimaduan.php">kirim aduan</a>
                     </li>
-                    <li><a href="cariaduan.php">cari aduan</a>
+                    <li><a href="cariaduan.php">Daftar aduan</a>
                     </li>
                     <li><a href="daftartaman.php">daftar taman</a>
                     </li>
