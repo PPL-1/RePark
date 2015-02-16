@@ -4,15 +4,16 @@
 	require ('cetak.php');
 	$startdate 	= $_GET['startdate'];
 	$finishdate = $_GET['finishdate'];
-	$instansi 	= $_GET['instansi'];
+//	$instansi 	= $_GET['instansi'];
 
-	if($instansi == '')
+	if(isset($_GET['instansi']) && !empty($_GET['instansi']))
 	{
-		printLaporan($startdate, $finishdate);
+		$instansi       = $_GET['instansi'];
+		printLaporan($startdate, $finishdate, $instansi);
 	}
 	else
 	{
-		printLaporan($startdate, $finishdate, $instansi);
+		printLaporan($startdate, $finishdate);
 	}
 	
 	

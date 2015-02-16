@@ -5,11 +5,10 @@ function printLaporan($startdate, $finishdate, $instansi='')
 {
 
 	$koneksi 	= getConnection();
-	//$query 		= "UPDATE `Pengaduan` SET `Tanggal`='2015-02-26 00:00:01' WHERE (mod(Id,2) = 0)";
 	if($instansi == '')
 	{
 		$query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-					FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."'";
+					FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi != ''";
 	}
 	else
 	{
