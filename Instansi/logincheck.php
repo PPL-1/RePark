@@ -1,19 +1,11 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
-	$dbname = "laportaman";
-	$pengguna = $_POST["user-name"];
-	$katapass = $_POST["pass-word"];
+	require '../database/config.php';
 
+	$pengguna = $_POST['user-name'];
+	$katapass = $_POST['pass-word'];
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
+      $conn = getConnection();
 
 	$sql = "SELECT * FROM Instansi Where Username='".$pengguna."' AND Password='".$katapass."'";
 	$result = $conn->query($sql);

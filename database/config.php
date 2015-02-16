@@ -1,7 +1,7 @@
 <?php
-	$servername = "akhfa.in";
-	$username	= "laportaman";
-	$password	= "RePark";
+	$servername = "localhost";
+	$usernamedb	= "root";
+	$passworddb	= "";
 	$dbname		= "laportaman";
 
 	/* Inisialisasi koneksi */
@@ -9,9 +9,9 @@
 	//function test() {echo "test";}
 	function getConnection()
 	{
-		global $servername, $username, $password, $dbname;
+		global $servername, $usernamedb, $passworddb, $dbname;
 		
-		$conn 	= new mysqli($servername, $username, $password, $dbname);
+		$conn 	= new mysqli($servername, $usernamedb, $passworddb, $dbname);
 		if ($conn->connect_error) {
     		die("Connection failed: " . $conn->connect_error);
 		}

@@ -1,19 +1,11 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
-	$dbname = "laportaman";
-	$pengguna = $_POST["user-name"];
-	$katapass = $_POST["pass-word"];
+require '../database/config.php';
 
+      $conn = getConnection();
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
+      $pengguna = $_POST['user-name'];
+      $katapass = $_POST['pass-word'];
 
 	$sql = "SELECT * FROM Admin Where Username='".$pengguna."' AND Password='".$katapass."'";
 	$result = $conn->query($sql);
@@ -27,26 +19,7 @@
 	    }
 	} else {
 		echo ("<script type='text/javascript'>alert('Username atau password error cuk');</script>");
-		header('Location: index.php');
+		// header('Location: index.php');
 	}
 	$conn->close();
  ?>
-
- <script>
-$(function() {
-    function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
-            }
-        }
-    }
-    var value = $("input#").val();;
-        console.log("ready!");
-    var cookie = $.cookie('name');
-    $.cookie('name', value);
-});
-</script>

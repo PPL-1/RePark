@@ -1,14 +1,9 @@
 <?php 
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "laportaman";
+	require '../database/config.php';
 
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
+      $conn = getConnection();
 
 
 	$sql = "UPDATE Pengaduan SET Status='Terkirim',Instansi='".$instansi."' WHERE Id=".$idpengaduan;
