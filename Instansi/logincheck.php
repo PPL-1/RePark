@@ -1,7 +1,7 @@
 <?php 
 
-	$servername = "localhost";
-	$username = "akhfa.in";
+	$servername = "akhfa.in";
+	$username = "laportaman";
 	$password = "RePark";
 	$dbname = "laportaman";
 	$pengguna = $_POST["user-name"];
