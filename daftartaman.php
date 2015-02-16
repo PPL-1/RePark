@@ -85,13 +85,13 @@
             }
             foreach ($arr_adu as $row) 
             {
-                ?>
-                    <div class="aduan">
-                        <h6><?php $row["NamaTaman"]); ?></h6><br>
-                        <h6><?php echo "Alamat : ".$row['Alamat'];?></h6>
-                        <br>
-                    </div>
-                <?php
+                
+                echo    '<div class="aduan">';
+                echo        '<h6><?php $row["NamaTaman"]); ?></h6><br>';
+                echo        '<h6><?php echo "Alamat : ".$row['Alamat'];?></h6>';
+                echo        '<br>';
+                echo    '</div>';
+                
             }
         closeConnection($koneksi);
         ?>
