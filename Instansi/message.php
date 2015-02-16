@@ -1,5 +1,10 @@
-<?php $username=$_GET['username'] ?>
-<?php $aing=$_GET['username'] ?>
+<?php 
+if(!isset($_COOKIE["Username"])) {
+    header('Location: index.php');
+} else {
+    $username=$_COOKIE["Username"];
+}
+?>
 
 <?php require "header.php"; ?>
 
@@ -36,16 +41,6 @@
                         <?php require ( 'getpengaduan.php'); ?>
 
                     </ul>
-                    <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-                        <div class="modal-content">
-                            <ul class="list-inline item-details">
-                                <li><a href="http://themifycloud.com">Admin templates</a>
-                                </li>
-                                <li><a href="http://themescloud.org">Bootstrap themes</a>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
                 </div>
 
                 <div id="contentpengaduan">
@@ -68,7 +63,7 @@
 </div>
 <!--/fluid-row-->
 
-<div class="modal hide fade" id="myModal">
+<!-- <div class="modal hide fade" id="myModal">
     <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal">×</button>
         <h3>Settings</h3>
@@ -80,35 +75,14 @@
         <a href="#" class="btn" data-dismiss="modal">Close</a>
         <a href="#" class="btn btn-primary">Save changes</a>
     </div>
-</div>
+</div> -->
 
 <div class="clearfix"></div>
 <script src="js/jquery-1.9.1.min.js"></script>
 
-<script>
-$(function() {
-    function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
-            }
-        }
-    }
-    var value = getUrlParameter('username');
-        console.log("ready!");
-    var cookie = $.cookie('name');
-    $.cookie('name', value);
-    var cookie = $.cookie('name');
-    $('#username').html(cookie);
-        console.log(cookie);
-});
-</script>
 
 <script>
-function showPengaduan(id,aing) {
+function showpengaduan(id) {
     if (window.XMLHttpRequest) {
         // code for IE7+, Firefox, Chrome, Opera, Safari
         xmlhttp = new XMLHttpRequest();
@@ -121,7 +95,7 @@ function showPengaduan(id,aing) {
             document.getElementById("contentpengaduan").innerHTML = xmlhttp.responseText;
         }
     }
-    xmlhttp.open("GET", "showpengaduan.php?id=" + id+"&aing="+aing, true);
+    xmlhttp.open("GET", "showpengaduan.php?id="+id, true);
     xmlhttp.send();
 }
 </script>

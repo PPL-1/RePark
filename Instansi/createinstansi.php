@@ -29,7 +29,7 @@ if(!isset($_COOKIE["Username"])) {
 					<a href="index.php">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Cetak Laporan</a></li>
+				<li><a href="#">Create Instansi</a></li>
 			</ul>
 
 			<div id="content" class="span10">
@@ -38,27 +38,33 @@ if(!isset($_COOKIE["Username"])) {
 			<div class="row-fluid sortable">
 				<div class="box span12">
 					<div class="box-header" data-original-title>
-						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Form Cetak Laporan</h2>
+						<h2><i class="halflings-icon white edit"></i><span class="break"></span>Tambah Instansi</h2>
 					</div>
 					<div class="box-content">
-						<form class="form-horizontal" action="../laporan/index.php" target="_blank"method="GET">
+						<form class="form-horizontal" action="createinstansihandler.php" method="POST">
 						  <fieldset>
 							<div class="control-group">
-							  <label class="control-label" for="date01">Tanggal awal</label>
+							  <label class="control-label" for="date01">Username</label>
 							  <div class="controls">
-								<input type="date" id="date01" name="startdate" value="02/16/14">
+								<input type="text" id="date01" name="username">
 							  </div>
 							</div>
 
 							<div class="control-group">
-							  <label class="control-label" for="date01">Tanggal akhir</label>
+							  <label class="control-label" for="date01">Email</label>
 							  <div class="controls">
-								<input type="date"  id="date02" name="finishdate" value="02/16/15">
+								<input type="text"  id="date02" name="email">
+							  </div>
+							</div>
+							<div class="control-group">
+							  <label class="control-label" for="date01">Password</label>
+							  <div class="controls">
+								<input type="text"  	id="date02" name="password">
 							  </div>
 							</div>
 
 							<div class="form-actions">
-							  <button type="submit" class="btn btn-primary">Cetak Laporan</button>
+							  <button type="submit" class="btn btn-primary">Tambah</button>
 							  <button type="reset" class="btn">Batal</button>
 							</div>
 						  </fieldset>

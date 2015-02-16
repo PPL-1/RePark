@@ -65,6 +65,15 @@
 <script src="js/custom.js"></script>
 <!-- end: JavaScript-->
 
+	<script>
+	$( document ).ready(function() {
+		$( ".logout-button" ).click(function() {
+			console.log('hoya');
+			$.removeCookie('Username', { path: '/' });
+		});		
+	});
+	</script>
+
 </body>
 
 </html>
