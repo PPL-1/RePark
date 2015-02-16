@@ -1,8 +1,8 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
 	$dbname = "laportaman";
 	$pengguna = $_POST["user-name"];
 	$katapass = $_POST["pass-word"];
@@ -23,10 +23,13 @@
 	    	$cookie_name = "Username";
 			$cookie_value = $pengguna;
 			setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-			header('Location: message.php']);
+			header('Location: message.php');
 	    }
 	} else {
+		echo ("<script type='text/javascript'>alert('Username atau password error cuk');</script>");
 		header('Location: index.php');
 	}
 	$conn->close();
  ?>
+
+</script>

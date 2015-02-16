@@ -41,7 +41,7 @@ if(!isset($_COOKIE["Username"])) {
 								require '../database/config.php';
 								$koneksi 	= getConnection();
 								//$query 		= "UPDATE `Pengaduan` SET `Tanggal`='2015-02-26 00:00:01' WHERE (mod(Id,2) = 0)";
-								$query 		= "SELECT * FROM Taman";
+								$query 		= "SELECT * FROM Instansi";
 								$result 	= getResultFromQuery($koneksi, $query);
 
 								if($result->num_rows > 0)
@@ -51,24 +51,32 @@ if(!isset($_COOKIE["Username"])) {
 											<h2><i class=\"halflings-icon white edit\"></i><span class=\"break\"></span>Update Taman</h2>
 											</div>
 											<div class=\"box-content\">
-											<form class=\"form-horizontal\" action=\"updatetamanhandler.php\"method=\"POST\">
+											<form class=\"form-horizontal\" action=\"updateinstansihandler.php\"method=\"POST\">
 											<fieldset>
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Nama Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Username</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date01\" name=\"namataman\" value=\"".$row["NamaTaman"]."\">
+												<span type=\"text\" class=\"input-xlarge uneditable-input\" id=\"date01\" name=\"username\" >".$row["Username"]."</span>
+											  </div>
+											</div>
+											<div class=\"control-group\">
+											  <label class=\"control-label\" for=\"date01\">Email</label>
+											  <div class=\"controls\">
+												<input type=\"text\" id=\"date01\" name=\"email\" value=\"".$row["Email"]."\">
 											  </div>
 											</div>
 
+											<input name=\"username\" type=\"hidden\" value=\"".$row["Username"]."\">
+
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Alamat Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Password</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date02\" name=\"alamattaman\" value=\"".$row["Alamat"]."\">
+												<input type=\"text\" id=\"date02\" name=\"password\" value=\"".$row["Password"]."\">
 											  </div>
 											</div>
-											<input name=\"id\" type=\"hidden\" value=\"".$row["Id"]."\">
+
 											<div class=\"form-actions\">
-											  <button type=\"submit\" class=\"btn btn-primary\">Update Taman</button>
+											  <button type=\"submit\" class=\"btn btn-primary\">Update Instansi</button>
 											  <button type=\"reset\" class=\"btn\">Batal</button>
 											</div></fieldset></form></div>";
 									}
@@ -76,6 +84,7 @@ if(!isset($_COOKIE["Username"])) {
 
 							closeConnection($koneksi);	
 							 ?>
+
 				</div><!--/span-->
 
 			</div><!--/row-->

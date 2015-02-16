@@ -1,9 +1,10 @@
 <?php 
 
 	$servername = "akhfa.in";
-	$usernamedb = "laportaman";
-	$passworddb = "RePark";
+	$username = "laportaman";
+	$password = "RePark";
 	$dbname = "laportaman";
+
 	$id = $_GET["id"];
 
 

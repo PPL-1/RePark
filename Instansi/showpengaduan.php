@@ -1,8 +1,8 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$usernamedb = "laportaman";
-	$passworddb = "RePark";
+	$servername = "localhost";
+	$usernamedb = "root";
+	$passworddb = "";
 	$dbname = "laportaman";
 	$id = $_GET["id"];
 
@@ -51,9 +51,10 @@
 							</ul>		
 						</div>
 						
-						<form class=\"replyForm\"method=\"get\" action=\"answerpengaduan.php\">
+						<form class=\"replyForm\"method=\"post\" action=\"jawabpengaduanhandler.php\">
 						<input name=\"idpengaduan\" type=\"hidden\" value=\"".$row["Id"]."\">
-						<input name=\"aing\" type=\"hidden\" value=\"".$_GET['aing']."\">
+
+
 						");
 						if ($row["Status"]=="Pending")
 						{
@@ -67,7 +68,7 @@
 										  <option>Dinas Kebakaran</option>
 										  <option>Dinas Kebersihan</option>
   										  <option>Dinas Pariwisata dan Kebudayaan</option>
-										  <option>Dinas Komunikasi dan Informatika</option>  										  
+										  <option>Dinas Komunikasi dan Informasi</option>  										  
 										  <option>Satpol PP</option>
 										  <option>Kepolisian</option>										  
 								  </select>
@@ -80,20 +81,15 @@
 						}
 						if ($row["Status"]=="Terkirim")
 						{
-							echo $row["Status"]." ke ".$row["Instansi"];
-							echo ("<fieldset>
-							  <div class=\"control-group\">
-								<label class=\"control-label\" for=\"selectError2\"><h3>Jawab Pengaduan</h3></label>
-								<textarea style=\"width:100%\" rows=\"10\" placeholder=\"Jawab pengaduan disini\"></textarea>
-							  </div>
-								<div class=\"actions\">									
-									<button tabindex=\"3\" type=\"submit\" class=\"btn btn-success\">Kirim Pengaduan</button>
-								</div>
-							</fieldset>");
+							echo "<p> Jawab Pengaduan </p>";
+							echo "<textarea name=\"jawaban\" style=\"width:100%\" rows=\"15\" placeholder=\"Tuliskan Jawaban Pengaduan disini\"></textarea>";
+							echo "<div class=\"actions\">									
+									<button tabindex=\"3\" type=\"submit\" class=\"btn btn-success\">Jawab Pengaduan</button>
+								</div>";
 						}
 						if ($row["Status"]=="Terjawab")
 						{
-							echo $row["Terjawab"]." oleh ".$row["Instansi"];							
+							echo $row["Status"]." oleh ".$row["Instansi"];							
 						}
 						echo	("</form>	
 						

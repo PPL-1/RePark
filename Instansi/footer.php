@@ -9,6 +9,7 @@
 
 <!-- start: JavaScript-->
 
+<script src="js/jquery-1.9.1.min.js"></script>
 <script src="js/jquery-migrate-1.0.0.min.js"></script>
 
 <script src="js/jquery-ui-1.10.0.custom.min.js"></script>
@@ -63,6 +64,15 @@
 
 <script src="js/custom.js"></script>
 <!-- end: JavaScript-->
+
+	<script>
+	$( document ).ready(function() {
+		$( ".logout-button" ).click(function() {
+			console.log('hoya');
+			$.removeCookie('Username', { path: '/' });
+		});		
+	});
+	</script>
 
 </body>
 

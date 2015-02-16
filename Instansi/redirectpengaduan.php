@@ -1,13 +1,9 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
 	$dbname = "laportaman";
-
-	$idpengaduan = $_GET["idpengaduan"];
-	$instansi = $_GET["instansi"];
-	$aing =  $_GET['aing'];
 
 
 	// Create connection
@@ -23,7 +19,7 @@
 		echo ("<script type='text/javascript'>alert('Error cuk');</script>");
 	}
 	$conn->close();
-	header('Location: message.php?username='.$aing);
+	header('Location: message.php');
 
  ?>
 

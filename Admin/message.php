@@ -90,27 +90,6 @@ if(!isset($_COOKIE["Username"])) {
 <div class="clearfix"></div>
 <script src="js/jquery-1.9.1.min.js"></script>
 
-<script>
-$(function() {
-    function getUrlParameter(sParam) {
-        var sPageURL = window.location.search.substring(1);
-        var sURLVariables = sPageURL.split('&');
-        for (var i = 0; i < sURLVariables.length; i++) {
-            var sParameterName = sURLVariables[i].split('=');
-            if (sParameterName[0] == sParam) {
-                return sParameterName[1];
-            }
-        }
-    }
-    var value = getUrlParameter('username');
-        console.log("ready!");
-    var cookie = $.cookie('name');
-    $.cookie('name', value);
-    var cookie = $.cookie('name');
-    $('#username').html(cookie);
-        console.log(cookie);
-});
-</script>
 
 <script>
 function showpengaduan(id) {
