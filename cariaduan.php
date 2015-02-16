@@ -98,6 +98,7 @@
                                     $myFormatForView = date("l jS F Y", $time);
                                     echo $myFormatForView;
                                  ?> | <?php echo $row['Lokasi'] ?></h6>
+                                 <h6><b><?php echo "Status : ".$row['Status']?></b></h6>
                                  <?php echo "<a style=\"text-decoration:none\"href=\"detailpengaduan.php?id=".$row['Id']."\"><h3>".$row['Judul']."</h3></a>" ?>
                                 <p><?php echo implode(' ', array_slice(explode(' ', $row['Isi']), 0, 20))."....."; ?></p>
                                 <br>
