@@ -44,11 +44,7 @@ if(!isset($_COOKIE["Username"])) {
 						<form class="form-horizontal" action="../laporan/index.php" target="_blank"method="GET">
 						  <fieldset>
 
-							<div class="control-group">
-s							  <div class="controls">
-								<?php echo '<input type="hidden" id="username" name="instansi" value="'.$username.'">'; ?>
-							  </div>
-							</div>
+							<?php echo '<input type="hidden" id="username" name="instansi" value="'.$username.'">'; ?>
 
 							<div class="control-group">
 							  <label class="control-label" for="date01">Tanggal awal</label>
