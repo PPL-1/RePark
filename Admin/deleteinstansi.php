@@ -59,6 +59,13 @@ if(!isset($_COOKIE["Username"])) {
 												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Username"]."</span>
 											  </div>
 											</div>
+											
+											<div class=\"control-group\">
+											  <label class=\"control-label\" for=\"date01\">Nama Instansi</label>
+											  <div class=\"controls\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Nama_Instansi"]."</span>
+											  </div>
+											</div>
 
 											<div class=\"control-group\">
 											  <label class=\"control-label\" for=\"date01\">Email</label>
