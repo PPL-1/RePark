@@ -14,5 +14,5 @@
 	echo $query;	
 	InsertQuery($koneksi,$query);
 	closeConnection($koneksi);
-	//header('Location: message.php');
+	header('Location: message.php');
 ?>
