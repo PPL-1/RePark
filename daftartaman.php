@@ -1,4 +1,7 @@
-<?php include 'header.php' ?>
+<?php 
+		require 'header.php';
+		require 'database/config.php';
+?>
 
 <body>
     <!-- header -->
@@ -11,7 +14,7 @@
                         </a>
                     </div>
                     <div class="titlelogo">
-                        <h3>Repark | Sistem Pengaduan Online Taman Bandung</h3>
+                        <a href="index.php"><h3>Repark | Sistem Pengaduan Online Taman Bandung</h3></a>
                     </div>
 
                     <div class="head-part">
@@ -60,114 +63,37 @@
             </div>
         </div>
     </div>
-    <!-- header -->
-    <!-- events -->
-    <!-- 	<div class="shop">
-		<div class="container">
-			<div class="row grids-1">
-				<div class="col-md-4 fam">
-				  <a href="single.php">
-					<img src="images/shp1.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>E-Book</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£4.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-				<div class="col-md-4 fam">
-				   <a href="single.php">
-					<img src="images/shp2.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>SevenOaks Mug</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£1.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-				<div class="col-md-4 fam">
-				 <a href="single.php">
-					<img src="images/shp3.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>SevenOaks T-Shirt</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£15.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-					<div class="clearfix"> </div>
-			</div>
-			<div class="row grids-2">
-				<div class="col-md-4 fam">
-				  <a href="single.php">
-					<img src="images/shp1.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>E-Book</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£4.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-				<div class="col-md-4 fam">
-				  <a href="single.php">
-					<img src="images/shp2.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>SevenOaks Mug</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£1.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-				<div class="col-md-4 fam">
-				  <a href="single.php">
-					<img src="images/shp3.jpg" class="img-responsive" alt=""/>
-					<div class="veiw-img-mark">
-							<a href="single.php">Quick view</a>
-						</div>
-					<div class="look-2">	
-						<div class="f-su-1">
-							<h4>SevenOaks T-Shirt</h4>
-						</div>
-						<div class="mnth-1">
-							<h6>£15.99</h6>
-						</div>
-						<div class="clearfix"> </div>
-					</div></a>
-				</div>
-					<div class="clearfix"> </div>
-			</div>
-		</div>
-	</div>
- -->
-    <!-- events -->
+
+	<div id="aduans">
+        <?php
+        	ini_set('display_errors', 1);
+        	$koneksi 	= getConnection();
+            $query 		= "SELECT * FROM Taman";
+            $result 	= getResultFromQuery($koneksi, $query);
+            
+            if (!$result) 
+            {
+                printf("Error: %s\n", mysqli_error($koneksi));
+                exit();
+            }
+
+            $arr_adu = array();
+            
+            while($row = mysqli_fetch_array($result))
+            {
+                array_unshift($arr_adu, $row);
+            }
+            foreach ($arr_adu as $row) 
+            {
+                
+                echo    '<div class="aduan">';
+                echo        '<h6><?php $row["NamaTaman"]); ?></h6><br>';
+                echo        '<h6><?php echo "Alamat : ".$row['Alamat'];?></h6>';
+                echo        '<br>';
+                echo    '</div>';
+                
+            }
+        closeConnection($koneksi);
+        ?>
+    </div>
     <?php include 'footer.php' ?>
