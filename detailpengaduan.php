@@ -120,11 +120,35 @@ $id = $_GET['id'];
                                  <?php echo "<a style=\"text-decoration:none\"href=\"detailpengaduan.php?id=".$row['Id']."\"><h3>".$row['Judul']."</h3></a>" ?>
                                 <p><?php echo $row['Isi'] ?></p>
                                 <br>
-                                <h6>Oleh : <?php echo $row['Nama'] ?></h6>
-                            </div>
+                                <h6>Oleh : <?php echo $row['Nama']; $instansi=$row['Instansi'];?></h6>
                 		<?php
                 	}
                 ?>
+                <hr>
+				<?php
+                        $query = "SELECT * FROM Jawaban WHERE IdPengaduan=".$row['Id'];
+                        $q_result = mysqli_query($conn,$query);
+                        if (!$q_result) 
+                        {
+                            printf("Error: %s\n", mysqli_error($conn));
+                            exit();
+                        }
+                        $arr_adu = array();
+                        while($row = mysqli_fetch_array($q_result))
+                        {
+                            array_unshift($arr_adu, $row);
+                        }
+                        foreach ($arr_adu as $row) 
+                        {
+                            ?>
+							<h3>Jawaban	</h3><span><h6>By <?php echo $instansi; ?></h6></span>
+							<br><br>
+							<p><?php echo $row['Isi']; ?></p>
+							<br>
+                            <?php
+                        }
+                    ?>
+                            </div>
             </div>
         </div>
     </div>
