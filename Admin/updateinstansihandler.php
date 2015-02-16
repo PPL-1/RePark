@@ -12,5 +12,5 @@
 	InsertQuery($koneksi,$query);
 	echo $query;
 	closeConnection($koneksi);
-	//header('Location: readinstansi.php');
+	header('Location: readinstansi.php');
 ?>
