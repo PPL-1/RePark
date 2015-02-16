@@ -49,7 +49,7 @@
 						<input name=\"namapengirim\" type=\"hidden\" value=\"".$row["Nama"]."\">
 
 						");
-						if ($row["Status"]=="Pending")
+						if ($row["Status"]=="Proses Moderasi")
 						{
 							echo ("<fieldset>
 							  <div class=\"control-group\">
