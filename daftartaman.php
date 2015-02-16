@@ -1,5 +1,4 @@
 <?php 
-		ini_set('display_errors', 1);
 		require 'header.php';
 		require 'database/config.php';
 ?>
@@ -67,6 +66,7 @@
 
 	<div id="aduans">
         <?php
+        	ini_set('display_errors', 1);
         	$koneksi 	= getConnection();
             $query 		= "SELECT * FROM Taman";
             $result 	= getResultFromQuery($koneksi, $query);
