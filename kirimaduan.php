@@ -96,7 +96,7 @@
                          ?>
                       </select>
                     </div>
-                    <textarea placeholder="Isi Aduan (Maksimum 200 karakter)" required="true" id="isi" name="isi"></textarea>
+                    <textarea placeholder="Isi Aduan (Maksimum 500 karakter)" required="true" id="isi" name="isi"></textarea>
                     <input type="submit" value="Kirim">
                 </form>
             </div>
