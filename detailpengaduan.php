@@ -3,7 +3,29 @@
 	include 'header.php';
 	  require 'database/config.php';
 	  $conn = getConnection();
-	  //test();
+	  
+	  function write_date($date) {
+		$num_to_mon = array(
+		"01" => "Januari",
+		"02" => "Februari",
+		"03" => "Maret",
+		"04" => "April",
+		"05" => "Mei",
+		"06" => "Juni",
+		"07" => "Juli",
+		"08" => "Agustus",
+		"09" => "September",
+		"10" => "Oktober",
+		"11" => "November",
+		"12" => "Desember"
+		);					
+		$splitted = explode("-",$date);
+		$splittedHD = explode(" ",$splitted[2]);
+		$result = $splittedHD[0]." ".$num_to_mon[$splitted[1]]." ".$splitted[0]." ".$splittedHD[1];
+		//$result = $splitted[2]."  ";
+		echo $result;
+	  }
+
 	  ?>
 <body>
 <?php 
@@ -89,9 +111,10 @@ $id = $_GET['id'];
                 		?>
                             <div class="aduan">
                                 <h6><?php 
-                                    $time = strtotime($row["Tanggal"]);
-                                    $myFormatForView = date("l jS F Y", $time);
-                                    echo $myFormatForView;
+                                    //$time = strtotime($row["Tanggal"]);
+                                    //$myFormatForView = date("l jS F Y", $time);
+                                    //echo $myFormatForView;
+                                    write_date($row["Tanggal"]);
                                  ?> | <?php echo $row['Lokasi'] ?></h6>
                                  <h6><b><?php echo "Status : ".$row['Status']?></b></h6>
                                  <?php echo "<a style=\"text-decoration:none\"href=\"detailpengaduan.php?id=".$row['Id']."\"><h3>".$row['Judul']."</h3></a>" ?>
