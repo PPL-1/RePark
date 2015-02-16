@@ -110,7 +110,7 @@
         <div class="row grids">
             <div class="col-md-4 grid1" style="padding-left:75px">
                 <a href="#">
-                    <img src="images/img1.jpg" class="img-responsive" alt="" />
+                    <a href="kirimaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
                     <h3>mengadu</h3>
                     <div class="look">
                         <ul>
@@ -125,7 +125,7 @@
             </div>
             <div class="col-md-4 grid2" style="padding-left:75px">
                 <a href="#">
-                    <img src="images/img1.jpg" class="img-responsive" alt="" />
+                    <a href="cariaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
                     <h3>mencari</h3>
                     <div class="look1">
                         <ul>
@@ -140,7 +140,7 @@
             </div>
             <div class="col-md-4 grid3" style="padding-left:75px">
                 <a href="#">
-                    <img src="images/img1.jpg" class="img-responsive" alt="" />
+                    <a href="daftartaman.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
                     <h3>lihat taman</h3>
                     <div class="look2">
                         <ul>
