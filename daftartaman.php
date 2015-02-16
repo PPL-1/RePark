@@ -14,7 +14,7 @@
                         </a>
                     </div>
                     <div class="titlelogo">
-                        <h3>Repark | Sistem Pengaduan Online Taman Bandung</h3>
+                        <a href="index.php"><h3>Repark | Sistem Pengaduan Online Taman Bandung</h3></a>
                     </div>
 
                     <div class="head-part">
@@ -66,32 +66,29 @@
 
 	<div id="aduans">
         <?php
+        	ini_set('display_errors', 1);
         	$koneksi 	= getConnection();
             $query 		= "SELECT * FROM Taman";
             $result 	= getResultFromQuery($koneksi, $query);
             
-            if (!$q_result) 
+            if($result->num_rows > 0)
             {
-                printf("Error: %s\n", mysqli_error($conn));
+                $arr_adu = array();
+            
+	            while($row = $result->fetch_assoc()) {
+	                echo    '<div class="aduan">';
+	                echo        '<h4>'.$row["NamaTaman"].'</h4>';
+	                echo        '<h6>Alamat : '.$row["Alamat"].'</h6>';
+	                echo    '</div>';
+	            }
+            }
+            else
+            {
+            	printf("Error: %s\n", mysqli_error($koneksi));
                 exit();
             }
 
-            $arr_adu = array();
             
-            while($row = mysqli_fetch_array($result))
-            {
-                array_unshift($arr_adu, $row);
-            }
-            foreach ($arr_adu as $row) 
-            {
-                ?>
-                    <div class="aduan">
-                        <h6><?php $row["NamaTaman"]); ?></h6><br>
-                        <h6><?php echo "Alamat : ".$row['Alamat'];?></h6>
-                        <br>
-                    </div>
-                <?php
-            }
         closeConnection($koneksi);
         ?>
     </div>

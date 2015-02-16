@@ -17,7 +17,7 @@
                         </a>
                     </div>
                     <div class="titlelogo">
-                        <h3>Repark | Sistem Pengaduan Online Taman Bandung</h3>
+                        <a href="index.php"><h3>Repark | Sistem Pengaduan Online Taman Bandung</h3></a>
                     </div>
 
                     <div class="head-part">
@@ -96,13 +96,9 @@
                          ?>
                       </select>
                     </div>
-                    <textarea placeholder="Isi Aduan" required="true" id="isi" name="isi"></textarea>
+                    <textarea placeholder="Isi Aduan (Maksimum 500 karakter)" required="true" id="isi" name="isi"></textarea>
                     <input type="submit" value="Kirim">
                 </form>
-                <?php
-                    //$query = "INSERT INTO `Pengaduan`(`Judul`,`Nama`,`Telepon`, `Isi`) VALUES (".$_POST["judul"].",".$_POST["nama"].",".$_POST["no_telp"].",".$_POST["isi"].")";
-                    //$result = mysqli_query($conn,$query) or die("Unable to execute query");
-                ?>
             </div>
             <div class="col-md-6 contact-info">
                 <h3>Kirimkan Aduan Anda</h3>
@@ -126,9 +122,7 @@
     <?php 
         if(isset($_POST["judul"]) && isset($_POST["nama"]) && isset($_POST["no_telp"]) && isset($_POST["isi"]))
         {
-            //$query = "INSERT INTO post (Title, Content, Date) VALUES ('" . $_POST["Judul"] . "', '" . $_POST["Konten"] . "', '" . to_date_type($_POST["Tanggal"]). "')";
             $query = "INSERT INTO Pengaduan(Judul,Nama,Telepon,Isi,Lokasi) VALUES ('".$_POST["judul"]."','".$_POST["nama"]."','".$_POST["no_telp"]."','".$_POST["isi"]."','".$_POST["lokasi"]."')";
-            //$query = "INSERT INTO `Pengaduan`(`Judul`,`Nama`,`Telepon`, `Isi`) VALUES (".$_POST["judul"].",".$_POST["nama"].",".$_POST["no_telp"].",".$_POST["isi"].")";
             $result = mysqli_query($conn,$query) or die("Unable to execute query");
             mysqli_close($conn);
         }
@@ -138,6 +132,7 @@
 <script type="text/javascript">
 function is_no_telp_valid()
 {
+    alert("hai");
     var no_telp = document.forms["kirim_adu"]["no_telp"].value;
     var regex = /(0([0-9])+)/;
     if(!no_telp.match(regex))
@@ -145,7 +140,13 @@ function is_no_telp_valid()
         alert("Cek kembali nomor telepon Anda");
         return false;
     }
-    alert("Terima kasih atas inputan Anda\n Pengaduan Anda akan kami proses secepatnya")
-    
+    alert(document.forms["kirim_adu"]["isi"].value.length);
+    //return false;
+    if(document.forms["kirim_adu"]["isi"].value.length>500)
+    {
+        alert("Isi aduan tidak boleh melebihi 500 karakter");
+        return false;
+    }
+    alert("Terima kasih atas inputan Anda\n Pengaduan Anda akan kami proses secepatnya");
 }
 </script>
