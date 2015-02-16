@@ -76,6 +76,26 @@
                     <input type="text" placeholder="Nama Lengkap" required="true" id="nama" name="nama">
                     <input type="text" placeholder="Nomor Telepon (0xxxxxxxxxxx)" required="true" id="no_telp" name="no_telp">
                     <input type="text" placeholder="Judul Aduan" required="true" id="judul" name="judul">
+                    <div class="controls" style="font-size:18px;margin-bottom:1em">
+                        <select data-placeholder="" id="selectError2" data-rel="chosen" name="lokasi">
+                        <option value="Masukkan Taman"></option>
+                        <?php 
+                              $conn = getConnection();
+                            $id = $_GET['id'];
+
+                            $sql = "SELECT * FROM Taman";
+                            $result = $conn->query($sql);
+                            if ($result->num_rows > 0) {
+                                // output data of each row
+                                while($row = $result->fetch_assoc()) {
+                                    echo "<option>".$row['NamaTaman']."</option>";
+                                }
+                            } else {
+                                echo ("<script type='text/javascript'>alert('Error cuk');</script>");
+                            }
+                         ?>
+                      </select>
+                    </div>
                     <textarea placeholder="Isi Aduan" required="true" id="isi" name="isi"></textarea>
                     <input type="submit" value="Kirim">
                 </form>
@@ -107,7 +127,7 @@
         if(isset($_POST["judul"]) && isset($_POST["nama"]) && isset($_POST["no_telp"]) && isset($_POST["isi"]))
         {
             //$query = "INSERT INTO post (Title, Content, Date) VALUES ('" . $_POST["Judul"] . "', '" . $_POST["Konten"] . "', '" . to_date_type($_POST["Tanggal"]). "')";
-            $query = "INSERT INTO Pengaduan(Judul,Nama,Telepon,Isi) VALUES ('".$_POST["judul"]."','".$_POST["nama"]."','".$_POST["no_telp"]."','".$_POST["isi"]."')";
+            $query = "INSERT INTO Pengaduan(Judul,Nama,Telepon,Isi,Lokasi) VALUES ('".$_POST["judul"]."','".$_POST["nama"]."','".$_POST["no_telp"]."','".$_POST["isi"]."','".$_POST["lokasi"]."')";
             //$query = "INSERT INTO `Pengaduan`(`Judul`,`Nama`,`Telepon`, `Isi`) VALUES (".$_POST["judul"].",".$_POST["nama"].",".$_POST["no_telp"].",".$_POST["isi"].")";
             $result = mysqli_query($conn,$query) or die("Unable to execute query");
             mysqli_close($conn);
