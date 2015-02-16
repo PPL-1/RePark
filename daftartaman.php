@@ -14,7 +14,7 @@
                         </a>
                     </div>
                     <div class="titlelogo">
-                        <h3>Repark | Sistem Pengaduan Online Taman Bandung</h3>
+                        <a href="index.php"><h3>Repark | Sistem Pengaduan Online Taman Bandung</h3></a>
                     </div>
 
                     <div class="head-part">
