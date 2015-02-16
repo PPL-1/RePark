@@ -7,7 +7,7 @@
 
 	$koneksi 	= getConnection();
 	
-	$query 		= "INSERT INTO `Jawaban`(`Id Pengaduan`, `Tanngal`, `Isi`) VALUES ('".$idpengaduan."' , CURRENT_TIMESTAMP, '".$isi."')";
+	$query 		= "INSERT INTO `Jawaban`(`Id Pengaduan`, `Tanggal`, `Isi`) VALUES ('".$idpengaduan."' , CURRENT_TIMESTAMP, '".$isi."')";
 	InsertQuery($koneksi,$query);
 	echo $query;
 	$query = "UPDATE Pengaduan SET Status='Terjawab' WHERE Id=".$idpengaduan;
