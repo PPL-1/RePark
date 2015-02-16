@@ -1,8 +1,8 @@
 <?php 
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
+	$servername = "akhfa.in";
+	$username = "laportaman";
+	$password = "RePark";
 	$dbname = "laportaman";
 	$pengguna = $_POST["user-name"];
 	$katapass = $_POST["pass-word"];
