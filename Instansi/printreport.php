@@ -43,10 +43,10 @@ if(!isset($_COOKIE["Username"])) {
 					<div class="box-content">
 						<form class="form-horizontal" action="../laporan/index.php" target="_blank"method="GET">
 						  <fieldset>
+
 							<div class="control-group">
-							  <label class="control-label" for="date01">Instansi</label>
-							  <div class="controls">
-								<input type="date" id="username" name=<?php $username ?> value="02/16/14" disabled>
+s							  <div class="controls">
+								<?php echo '<input type="hidden" id="username" name="instansi" value="'.$username.'">'; ?>
 							  </div>
 							</div>
 
