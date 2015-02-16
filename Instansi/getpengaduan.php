@@ -11,7 +11,8 @@ if(!isset($_COOKIE["Username"])) {
 
       $conn = getConnection();
 
-	$sql = "SELECT * FROM pengaduan, instansi WHERE instansi.Username = '".$pengguna."' AND instansi.Username=pengaduan.Instansi ORDER BY Tanggal DESC LIMIT 0,30";
+	$sql = "SELECT * FROM Pengaduan, Instansi WHERE Instansi.Username = '".$pengguna."' AND instansi.Username=pengaduan.Instansi ORDER BY Tanggal DESC LIMIT 0,30";
+	echo $sql;
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    // output data of each row
