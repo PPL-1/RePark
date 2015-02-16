@@ -4,7 +4,6 @@
       require 'database/config.php';
 
       $conn = getConnection();
-      //test();
       ?>
 
 <body>
