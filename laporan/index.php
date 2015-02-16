@@ -2,7 +2,7 @@
 	ini_set('display_errors', 1);
 	
 	if(!isset($_COOKIE["Username"])) {
-    	header('Location: ../index.php');
+    	header('Location: ../Instansi/index.php');
 	}
 	
 	require '../database/config.php';
