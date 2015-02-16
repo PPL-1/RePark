@@ -62,7 +62,7 @@ if(!isset($_COOKIE["Username"])) {
 											<div class=\"control-group\">
 											  <label class=\"control-label\" for=\"date01\">Nama Instansi</label>
 											  <div class=\"controls\">
-												<span type=\"text\" class=\"input-xlarge uneditable-input\" id=\"date01\" name=\"username\" >".$row["Nama_Instansi"]."</span>
+												<input type=\"text\" id=\"date01\" name=\"nama_instansi\" value=\"".$row["Nama_Instansi"]."\">
 											  </div>
 											</div>
 											<div class=\"control-group\">
