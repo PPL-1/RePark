@@ -6,8 +6,8 @@
 
 
 	$koneksi 	= getConnection();
-	//$query 		= "UPDATE `Pengaduan` SET `Tanggal`='2015-02-26 00:00:01' WHERE (mod(Id,2) = 0)";
-	$query 		= "INSERT INTO `jawaban`(`Id Pengaduan`, `Isi`) VALUES ('".$idpengaduan."' , '".$isi."')";
+	
+	$query 		= "INSERT INTO `Jawaban`(`Id Pengaduan`, `Tanngal`, `Isi`) VALUES ('".$idpengaduan."' , CURRENT_TIMESTAMP, '".$isi."')";
 	InsertQuery($koneksi,$query);
 	echo $query;
 	$query = "UPDATE Pengaduan SET Status='Terjawab' WHERE Id=".$idpengaduan;

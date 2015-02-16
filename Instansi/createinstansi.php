@@ -49,6 +49,13 @@ if(!isset($_COOKIE["Username"])) {
 								<input type="text" id="date01" name="username">
 							  </div>
 							</div>
+                            
+                            <div class="control-group">
+							  <label class="control-label" for="date01">Nama_Instansi</label>
+							  <div class="controls">
+								<input type="text" id="date03" name="nama_instansi">
+							  </div>
+							</div>
 
 							<div class="control-group">
 							  <label class="control-label" for="date01">Email</label>
