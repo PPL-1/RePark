@@ -100,7 +100,11 @@
                 	{
                 		?>
                 			<div class="aduan">
-                				<h6> | <?php echo $row['Lokasi'] ?></h6>
+                				<h6><?php 
+                                    $time = strtotime($row["Tanggal"]);
+                                    $myFormatForView = date("l jS \of F Y h:i:s A", $time);
+                                    echo $myFormatForView;
+                                 ?> | <?php echo $row['Lokasi'] ?></h6>
                 				<h3><?php echo $row['Judul'] ?></h3>
                 				<p><?php echo $row['Isi'] ?></p>
                 				<br>
