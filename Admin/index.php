@@ -1,4 +1,9 @@
 <!DOCTYPE html>
+<?php 
+    if(isset($_COOKIE["Username"])) {
+        header('Location: message.php');
+    }
+?>
 <html lang="en">
 
 <head>
