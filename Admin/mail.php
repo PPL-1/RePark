@@ -6,19 +6,11 @@
 	$idpengaduan = $_POST["idpengaduan"];
 	$instansi = $_POST["instansi"];
 
-		$servername = "akhfa.in";
-		$username = "laportaman";
-		$password = "RePark";
-		$dbname = "laportaman";
+	require '../database/config.php';
 
 
-		// Create connection
-		$conn = new mysqli($servername, $username, $password, $dbname);
-		// Check connection
-		if ($conn->connect_error) {
-		    die("Connection failed: " . $conn->connect_error);
-		} 
-
+      $conn = getConnection();
+      
 		$sql = "SELECT Email FROM Instansi WHERE Username='".$instansi."'";
 		echo $sql;
 		$result = $conn->query($sql);

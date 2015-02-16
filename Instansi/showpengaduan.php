@@ -1,18 +1,10 @@
 <?php 
 
-	$servername = "localhost";
-	$usernamedb = "root";
-	$passworddb = "";
-	$dbname = "laportaman";
-	$id = $_GET["id"];
+	require '../database/config.php';
 
 
-	// Create connection
-	$conn = new mysqli($servername, $usernamedb, $passworddb, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
+      $conn = getConnection();
+      $id = $_GET['id'];
 
 	$sql = "SELECT * FROM Pengaduan WHERE Id=".$id;
 	$result = $conn->query($sql);

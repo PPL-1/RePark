@@ -1,19 +1,9 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
-	$dbname = "laportaman";
+	require '../database/config.php';
 
-	$id = $_GET["id"];
-
-
-	// Create connection
-	$conn = new mysqli($servername, $usernamedb, $passworddb, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
+      $conn = getConnection();
+    $id = $_GET['id'];
 
 	$sql = "SELECT * FROM Pengaduan WHERE Id=".$id;
 	$result = $conn->query($sql);

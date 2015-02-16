@@ -6,18 +6,10 @@ if(!isset($_COOKIE["Username"])) {
     $pengguna=$_COOKIE["Username"];
 }
 
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "laportaman";
+	require '../database/config.php';
 
 
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-	    die("Connection failed: " . $conn->connect_error);
-	} 
+      $conn = getConnection();
 
 	$sql = "SELECT * FROM pengaduan, instansi WHERE instansi.Username = '".$pengguna."' AND instansi.Username=pengaduan.Instansi ORDER BY Tanggal DESC LIMIT 0,30";
 	$result = $conn->query($sql);
