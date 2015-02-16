@@ -111,11 +111,11 @@
             <div class="col-md-4 grid1" style="padding-left:75px">
                 <a href="#">
                     <a href="kirimaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <h3>mengadu</h3>
+                    <a href="kirimaduan.php"><h3>mengadu</h3></a>
                     <div class="look">
                         <ul>
                             <li>
-                                <h4>Kirim aduan ke Pemerintah</h4>
+                                <a href="kirimaduan.php"><h4>Kirim aduan ke Pemerintah</h4></a>
                             </li>
                             <li><i class="arrow"></i>
                             </li>
@@ -126,11 +126,11 @@
             <div class="col-md-4 grid2" style="padding-left:75px">
                 <a href="#">
                     <a href="cariaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <h3>mencari</h3>
+                    <a href="cariaduan.php"><h3>mencari</h3></a>
                     <div class="look1">
                         <ul>
                             <li>
-                                <h4>Cari aduan yang dikirimkan</h4>
+                                <a href="cariaduan.php"><h4>Cari aduan yang dikirimkan</h4></a>
                             </li>
                             <li><i class="arrow"></i>
                             </li>
@@ -141,11 +141,11 @@
             <div class="col-md-4 grid3" style="padding-left:75px">
                 <a href="#">
                     <a href="daftartaman.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <h3>lihat taman</h3>
+                    <a href="daftartaman.php"><h3>lihat taman</h3></a>
                     <div class="look2">
                         <ul>
                             <li>
-                                <h4>Melihat taman di Bandung</h4>
+                                <a href="daftartaman.php"><h4>Melihat taman di Bandung</h4></a>
                             </li>
                             <li><i class="arrow"></i>
                             </li>
