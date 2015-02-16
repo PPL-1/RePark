@@ -98,35 +98,36 @@
                     <button onclick="searchpengaduan()"> Cari </button>
                 </div>
                 <div id="aduans">
-                <?php
-                    $query = "SELECT * FROM Pengaduan LIMIT 5";
-                    $q_result = mysqli_query($conn,$query);
-            if (!$q_result) {
-    printf("Error: %s\n", mysqli_error($conn));
-    exit();
-}
-                    $arr_adu = array();
-                    while($row = mysqli_fetch_array($q_result))
-                    {
-                        array_unshift($arr_adu, $row);
-                    }
-                    foreach ($arr_adu as $row) 
-                    {
-                        ?>
-                            <div class="aduan">
-                                <h6><?php 
-                                    write_date($row["Tanggal"]);
-                                 ?> | <?php echo $row['Lokasi'] ?></h6>
-                                 <h6><b><?php echo "Status : ".$row['Status']?></b></h6>
-                                 <?php echo "<a style=\"text-decoration:none\"href=\"detailpengaduan.php?id=".$row['Id']."\"><h3>".$row['Judul']."</h3></a>" ?>
-                                <p><?php echo implode(' ', array_slice(explode(' ', $row['Isi']), 0, 20))."....."; ?></p>
-                                <br>
-                                <h6>Oleh : <?php echo $row['Nama'] ?></h6>
-                            </div>
-                        <?php
-                    }
-                echo "<div style=\"text-align:center;margin:1em;\"><a onclick=\"showpengaduan(10)\"><input class=\"Selanjutnya\"type=\"submit\" value=\"Selanjutnya\"></a></div>";
-                ?>
+                    <?php
+                        $query = "SELECT * FROM Pengaduan LIMIT 5";
+                        $q_result = mysqli_query($conn,$query);
+                        if (!$q_result) 
+                        {
+                            printf("Error: %s\n", mysqli_error($conn));
+                            exit();
+                        }
+                        $arr_adu = array();
+                        while($row = mysqli_fetch_array($q_result))
+                        {
+                            array_unshift($arr_adu, $row);
+                        }
+                        foreach ($arr_adu as $row) 
+                        {
+                            ?>
+                                <div class="aduan">
+                                    <h6><?php 
+                                        write_date($row["Tanggal"]);
+                                     ?> | <?php echo $row['Lokasi'] ?></h6>
+                                     <h6><b><?php echo "Status : ".$row['Status']?></b></h6>
+                                     <?php echo "<a style=\"text-decoration:none\"href=\"detailpengaduan.php?id=".$row['Id']."\"><h3>".$row['Judul']."</h3></a>" ?>
+                                    <p><?php echo implode(' ', array_slice(explode(' ', $row['Isi']), 0, 20))."....."; ?></p>
+                                    <br>
+                                    <h6>Oleh : <?php echo $row['Nama'] ?></h6>
+                                </div>
+                            <?php
+                        }
+                    echo "<div style=\"text-align:center;margin:1em;\"><a onclick=\"showpengaduan(10)\"><input class=\"Selanjutnya\"type=\"submit\" value=\"Selanjutnya\"></a></div>";
+                    ?>
                 </div>
             </div>
         </div>
