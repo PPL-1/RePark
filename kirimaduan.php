@@ -1,4 +1,10 @@
-<?php include 'header.php' ?>
+<?php 
+    ini_set('display_errors', 1);
+    include 'header.php';
+    require 'database/config.php';
+
+    $conn = getConnection();
+?>
 
 <body>
     <!-- header -->
@@ -66,18 +72,22 @@
         <div class="container">
             <h3>Formulir Pengaduan</h3>
             <div class="col-md-6 contact-form news">
-                <form>
-                    <input type="text" placeholder="Nama Lengkap" required="">
-                    <input type="text" placeholder="Nomor Telepon" required="">
-                    <input type="text" placeholder="Judul Aduan" required="">
-                    <textarea placeholder="Isi Aduan" required=""></textarea>
+                <form name="kirim_adu" method="post" onsubmit="return is_no_telp_valid()">
+                    <input type="text" placeholder="Nama Lengkap" required="true" id="nama" name="nama">
+                    <input type="text" placeholder="Nomor Telepon (0xxxxxxxxxxx)" required="true" id="no_telp" name="no_telp">
+                    <input type="text" placeholder="Judul Aduan" required="true" id="judul" name="judul">
+                    <textarea placeholder="Isi Aduan" required="true" id="isi" name="isi"></textarea>
                     <input type="submit" value="Kirim">
                 </form>
+                <?php
+                    //$query = "INSERT INTO `Pengaduan`(`Judul`,`Nama`,`Telepon`, `Isi`) VALUES (".$_POST["judul"].",".$_POST["nama"].",".$_POST["no_telp"].",".$_POST["isi"].")";
+                    //$result = mysqli_query($conn,$query) or die("Unable to execute query");
+                ?>
             </div>
             <div class="col-md-6 contact-info">
                 <h3>Kirimkan Aduan Anda</h3>
                 <p>
-                    Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkkan Bandung Juara
+	                Masalah di Kota Bandung tidak akan bisa diselesaikan oleh Pemerintah saja. Kami membutuhkan bantuan anda untuk mewujudkan Bandung Juara
                 </p>
                 <h6>Dinas Pertamanan dan Pemakaman
                     <span>Jalan Ganesha 10 Kelurahan Lebak Siliwangi Kecamatan Coblong</span>
@@ -93,4 +103,29 @@
         </div>
     </div>
     <!-- contact -->
-    <?php include 'footer.php' ?>
+    <?php 
+        if(isset($_POST["judul"]) && isset($_POST["nama"]) && isset($_POST["no_telp"]) && isset($_POST["isi"]))
+        {
+            //$query = "INSERT INTO post (Title, Content, Date) VALUES ('" . $_POST["Judul"] . "', '" . $_POST["Konten"] . "', '" . to_date_type($_POST["Tanggal"]). "')";
+            $query = "INSERT INTO Pengaduan(Judul,Nama,Telepon,Isi) VALUES ('".$_POST["judul"]."','".$_POST["nama"]."','".$_POST["no_telp"]."','".$_POST["isi"]."')";
+            //$query = "INSERT INTO `Pengaduan`(`Judul`,`Nama`,`Telepon`, `Isi`) VALUES (".$_POST["judul"].",".$_POST["nama"].",".$_POST["no_telp"].",".$_POST["isi"].")";
+            $result = mysqli_query($conn,$query) or die("Unable to execute query");
+            mysqli_close($conn);
+        }
+        include 'footer.php'; 
+    ?>
+
+<script type="text/javascript">
+function is_no_telp_valid()
+{
+    var no_telp = document.forms["kirim_adu"]["no_telp"].value;
+    var regex = /(0([0-9])+)/;
+    if(!no_telp.match(regex))
+    {
+        alert("Cek kembali nomor telepon Anda");
+        return false;
+    }
+    alert("Terima kasih atas inputan Anda\n Pengaduan Anda akan kami proses secepatnya")
+    
+}
+</script>
