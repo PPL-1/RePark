@@ -7,13 +7,22 @@ function printLaporan($startdate, $finishdate, $instansi='')
 	$koneksi 	= getConnection();
 	if($instansi == '')
 	{
-		$query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-					FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi != ''";
+		// $query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
+		// 			FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi != ''";
+
+		$query 		= "SELECT Judul, Lokasi, Nama, Pengaduan.Tanggal as TanggalPengaduan, Instansi, Telepon, Status, Pengaduan.Isi as IsiPengaduan, Jawaban.Tanggal as TanggalJawaban, Jawaban.Isi as IsiJawaban
+					FROM Pengaduan LEFT JOIN Jawaban ON Pengaduan.Id = Jawaban.IdPengaduan 
+					WHERE Pengaduan.Tanggal BETWEEN '".$startdate."' AND '".$finishdate."'";
+
 	}
 	else
 	{
-		$query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-					FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi = '".$instansi."'";
+		$query 		= "SELECT Judul, Lokasi, Nama, Pengaduan.Tanggal as TanggalPengaduan, Instansi, Telepon, Status, Pengaduan.Isi  as IsiPengaduan, Jawaban.Tanggal as TanggalJawaban, Jawaban.Isi as IsiJawaban
+					FROM Pengaduan LEFT JOIN Jawaban ON Pengaduan.Id = Jawaban.IdPengaduan 
+					WHERE Pengaduan.Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi = '".$instansi."'";
+
+		// $query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
+		// 			FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi = '".$instansi."'";
 	}
 	
 	$result 	= getResultFromQuery($koneksi, $query);
@@ -63,12 +72,21 @@ function printLaporan($startdate, $finishdate, $instansi='')
 			$judul 		= '<b>'.$row['Judul'].'</b><br>';
 			$lokasi 	= 'Lokasi 	: '.$row['Lokasi'].'<br>';
 			$nama 		= 'Nama 	: '.$row['Nama'].'<br>';
-			$tanggal 	= 'Tanggal 	: '.$row['Tanggal'].'<br>';
+			$tanggal 	= 'Tanggal 	: '.$row['TanggalPengaduan'].'<br>';
 			$instansi 	= 'Instansi : '.$row['Instansi'].'<br>';
 			$telepon 	= 'Telepon 	: '.$row['Telepon'].'<br>';
-			$isi 		= 'Isi 		: <br>'.$row['Isi'].'<br>';
+			$isi 		= 'Isi 		: <br>'.$row['IsiPengaduan'].'<br>';
 			$status 	= 'Status 	: '.$row['Status'];
-			$html = $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status;
+			
+			if(!is_null($row['IsiJawaban']))
+			{
+				$Jawaban 	= 'Jawaban 	: <br>'.$row['IsiJawaban'].'<br>';
+				$TanggalJawaban = 'Dijawab tanggal : '.$row['TanggalJawaban'];
+				$html = $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status.$Jawaban.$TanggalJawaban;
+			}
+			else
+				$html = $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status;
+			
 			// Print text using writeHTMLCell()
 			$pdf->writeHTMLCell(0, 0, '', '', $html, 1, 1, 0, true, '', true);
 		}
@@ -77,7 +95,10 @@ function printLaporan($startdate, $finishdate, $instansi='')
 		
 	}
 	else
+	{
 		echo "<script type='text/javascript'>alert('Data pengaduan tidak ditemukan. Periksa kembali input anda');</script>";
+		header('Location: ../Admin/printreport.php');
+	}
 
 	closeConnection($koneksi);
 }
