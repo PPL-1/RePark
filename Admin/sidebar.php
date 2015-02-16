@@ -9,26 +9,26 @@
             <li>
                 <a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Pengaturan Taman</span><span class="label label-important"> 3 </span></a>
                 <ul style="display: none;">
-                    <li><a class="submenu" href="createtaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Create Taman</span></a>
+                    <li><a class="submenu" href="createtaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Tambah Taman</span></a>
                     </li>
-                    <li><a class="submenu" href="readtaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Read Taman</span></a>
+                    <li><a class="submenu" href="readtaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Lihat Daftar Taman</span></a>
                     </li>
-                    <li><a class="submenu" href="updatetaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Update Taman</span></a>
+                    <li><a class="submenu" href="updatetaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Edit Taman</span></a>
                     </li>
-                    <li><a class="submenu" href="deletetaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Delete Taman</span></a>
+                    <li><a class="submenu" href="deletetaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Hapus Taman</span></a>
                     </li>
                 </ul>
             </li>
             <li>
                 <a class="dropmenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Pengaturan Instansi</span><span class="label label-important"> 3 </span></a>
                 <ul style="display: none;">
-                    <li><a class="submenu" href="createinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Create Instansi</span></a>
+                    <li><a class="submenu" href="createinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Tambah Instansi</span></a>
                     </li>
-                    <li><a class="submenu" href="readinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Read Instansi</span></a>
+                    <li><a class="submenu" href="readinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Lihat Daftar Instansi</span></a>
                     </li>                    
-                    <li><a class="submenu" href="updateinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Update Instansi</span></a>
+                    <li><a class="submenu" href="updateinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Edit Instansi</span></a>
                     </li>
-                    <li><a class="submenu" href="deleteinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Delete Instansi</span></a>
+                    <li><a class="submenu" href="deleteinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Hapus Instansi</span></a>
                     </li>
                 </ul>
             </li>
