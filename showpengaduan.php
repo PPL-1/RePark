@@ -3,6 +3,8 @@
       require 'database/config.php';
 
       $conn = getConnection();
+
+      $n = $_GET['Jumlah'];
       
 	$sql = "SELECT * FROM Pengaduan LIMIT ".$n;
 	$result = $conn->query($sql);
