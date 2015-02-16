@@ -73,16 +73,15 @@
             <div class="col-md-5 mission-1">
                 <ul>
                     <li>
-                        <a href="#">
-                            < Visi Misi</a>
+                        Menu
                     </li>
-                    <li><a href="#">Menu1</a>
+                    <li><a href="index.php">Beranda</a>
                     </li>
-                    <li><a href="#">Menu2</a>
+                    <li><a href="kirimaduan.php">Kirim Aduan</a>
                     </li>
-                    <li><a href="#">Menu3</a>
+                    <li><a href="cariaduan.php">Lihat Daftar Aduan</a>
                     </li>
-                    <li><a href="#">Menu4</a>
+                    <li><a href="daftartaman.php">Lihat Daftar Taman</a>
                     </li>
                 </ul>
             </div>
