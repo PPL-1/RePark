@@ -23,7 +23,7 @@
 	    	$cookie_name = "Username";
 			$cookie_value = $pengguna;
 			setcookie($cookie_name, $cookie_value, time() + (86400 * 30), "/"); // 86400 = 1 day
-			header('Location: message.php']);
+			header('Location: message.php');
 	    }
 	} else {
 		header('Location: index.php');
