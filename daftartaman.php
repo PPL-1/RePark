@@ -70,9 +70,9 @@
             $query 		= "SELECT * FROM Taman";
             $result 	= getResultFromQuery($koneksi, $query);
             
-            if (!$q_result) 
+            if (!$result) 
             {
-                printf("Error: %s\n", mysqli_error($conn));
+                printf("Error: %s\n", mysqli_error($koneksi));
                 exit();
             }
 
