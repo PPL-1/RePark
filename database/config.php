@@ -1,7 +1,7 @@
 <?php
-	$servername = "akhfa.in";
-	$username	= "laportaman";
-	$password	= "RePark";
+	$servername = "localhost";
+	$username	= "root";
+	$password	= "";
 	$dbname		= "laportaman";
 
 	/* Inisialisasi koneksi */
