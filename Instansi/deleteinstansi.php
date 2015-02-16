@@ -29,7 +29,7 @@ if(!isset($_COOKIE["Username"])) {
 					<a href="index.php">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Update Taman</a></li>
+				<li><a href="#">Delete Taman</a></li>
 			</ul>
 
 			<div id="content" class="span10">
@@ -41,34 +41,42 @@ if(!isset($_COOKIE["Username"])) {
 								require '../database/config.php';
 								$koneksi 	= getConnection();
 								//$query 		= "UPDATE `Pengaduan` SET `Tanggal`='2015-02-26 00:00:01' WHERE (mod(Id,2) = 0)";
-								$query 		= "SELECT * FROM Taman";
+								$query 		= "SELECT * FROM Instansi";
 								$result 	= getResultFromQuery($koneksi, $query);
 
 								if($result->num_rows > 0)
 								{
 									while($row = $result->fetch_assoc()) {
 										echo "<div class=\"box-header\" data-original-title>
-											<h2><i class=\"halflings-icon white edit\"></i><span class=\"break\"></span>Update Taman</h2>
+											<h2><i class=\"halflings-icon white edit\"></i><span class=\"break\"></span>Delete Instansi</h2>
 											</div>
 											<div class=\"box-content\">
-											<form class=\"form-horizontal\" action=\"updatetamanhandler.php\"method=\"POST\">
+											<form class=\"form-horizontal\" action=\"deleteinstansihandler.php\"method=\"POST\">
 											<fieldset>
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Nama Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Username</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date01\" name=\"namataman\" value=\"".$row["NamaTaman"]."\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Username"]."</span>
 											  </div>
 											</div>
 
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Alamat Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Email</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date02\" name=\"alamattaman\" value=\"".$row["Alamat"]."\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Email"]."</span>
 											  </div>
 											</div>
-											<input name=\"id\" type=\"hidden\" value=\"".$row["Id"]."\">
+
+											<input name=\"username\" type=\"hidden\" value=\"".$row["Username"]."\">
+											<div class=\"control-group\">
+											  <label class=\"control-label\" for=\"date01\">Password</label>
+											  <div class=\"controls\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Password"]."</span>
+											  </div>
+											</div>
+
 											<div class=\"form-actions\">
-											  <button type=\"submit\" class=\"btn btn-primary\">Update Taman</button>
+											  <button type=\"submit\" class=\"btn btn-primary\">Delete Instansi</button>
 											  <button type=\"reset\" class=\"btn\">Batal</button>
 											</div></fieldset></form></div>";
 									}
@@ -76,6 +84,7 @@ if(!isset($_COOKIE["Username"])) {
 
 							closeConnection($koneksi);	
 							 ?>
+
 				</div><!--/span-->
 
 			</div><!--/row-->

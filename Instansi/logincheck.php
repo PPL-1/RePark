@@ -1,8 +1,8 @@
 <?php 
 
-	$servername = "akhfa.in";
-	$username = "laportaman";
-	$password = "RePark";
+	$servername = "localhost";
+	$username = "root";
+	$password = "";
 	$dbname = "laportaman";
 	$pengguna = $_POST["user-name"];
 	$katapass = $_POST["pass-word"];
@@ -26,7 +26,10 @@
 			header('Location: message.php');
 	    }
 	} else {
+		echo ("<script type='text/javascript'>alert('Username atau password error cuk');</script>");
 		header('Location: index.php');
 	}
 	$conn->close();
  ?>
+
+</script>

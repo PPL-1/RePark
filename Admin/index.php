@@ -74,19 +74,12 @@
                             </div>
                             <div class="clearfix"></div>
 
-                            <label class="remember" for="remember">
-                                <input type="checkbox" id="remember" />Remember me</label>
-
                             <div class="button-login">
                                 <button type="submit" class="btn btn-primary" id="buttonsubmit">Login</button>
                             </div>
                             <div class="clearfix"></div>
                     </form>
                     <hr>
-                    <p>Forgot Password?</p>
-                    <p>
-                        No problem, <a href="#">click here</a> to get a new password.
-                    </p>
                 </div>
                 <!--/span-->
             </div>
@@ -98,16 +91,7 @@
 
     </div>
     <!--/fluid-row-->
-    <div class="common-modal modal fade" id="common-Modal1" tabindex="-1" role="dialog" aria-hidden="true">
-        <div class="modal-content">
-            <ul class="list-inline item-details">
-                <li><a href="http://themifycloud.com">Admin templates</a>
-                </li>
-                <li><a href="http://themescloud.org">Bootstrap themes</a>
-                </li>
-            </ul>
-        </div>
-    </div>
+
     <!-- start: JavaScript-->
     <script src="js/jquery-1.9.1.min.js"></script>
     <script src="js/jquery-migrate-1.0.0.min.js"></script>

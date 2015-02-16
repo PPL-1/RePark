@@ -29,7 +29,7 @@ if(!isset($_COOKIE["Username"])) {
 					<a href="index.php">Home</a> 
 					<i class="icon-angle-right"></i>
 				</li>
-				<li><a href="#">Update Taman</a></li>
+				<li><a href="#">Delete Taman</a></li>
 			</ul>
 
 			<div id="content" class="span10">
@@ -47,35 +47,37 @@ if(!isset($_COOKIE["Username"])) {
 								if($result->num_rows > 0)
 								{
 									while($row = $result->fetch_assoc()) {
-										echo "<div class=\"box-header\" data-original-title>
-											<h2><i class=\"halflings-icon white edit\"></i><span class=\"break\"></span>Update Taman</h2>
+									echo "<div class=\"box-header\" data-original-title>
+											<h2><i class=\"halflings-icon white edit\"></i><span class=\"break\"></span>Delete Taman</h2>
 											</div>
 											<div class=\"box-content\">
-											<form class=\"form-horizontal\" action=\"updatetamanhandler.php\"method=\"POST\">
+											<form class=\"form-horizontal\" action=\"deletetamanhandler.php\"method=\"POST\">
 											<fieldset>
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Nama Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Username</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date01\" name=\"namataman\" value=\"".$row["NamaTaman"]."\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["NamaTaman"]."</span>
 											  </div>
 											</div>
 
 											<div class=\"control-group\">
-											  <label class=\"control-label\" for=\"date01\">Alamat Taman</label>
+											  <label class=\"control-label\" for=\"date01\">Email</label>
 											  <div class=\"controls\">
-												<input type=\"text\" id=\"date02\" name=\"alamattaman\" value=\"".$row["Alamat"]."\">
+												<span class=\"input-xlarge uneditable-input\" type=\"text\" id=\"date01\" name=\"username\">".$row["Alamat"]."</span>
 											  </div>
 											</div>
 											<input name=\"id\" type=\"hidden\" value=\"".$row["Id"]."\">
 											<div class=\"form-actions\">
-											  <button type=\"submit\" class=\"btn btn-primary\">Update Taman</button>
+											  <button type=\"submit\" class=\"btn btn-primary\">Delete Taman</button>
 											  <button type=\"reset\" class=\"btn\">Batal</button>
 											</div></fieldset></form></div>";
+
 									}
 								}
 
 							closeConnection($koneksi);	
 							 ?>
+
 				</div><!--/span-->
 
 			</div><!--/row-->

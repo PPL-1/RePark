@@ -7,7 +7,7 @@
             <li><a href="printreport.php"><i class="icon-file"></i><span class="hidden-tablet"> Cetak Laporan</span></a>
             </li>
             <li>
-                <a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> CRUD Taman</span><span class="label label-important"> 3 </span></a>
+                <a class="dropmenu" href="#"><i class="icon-picture"></i><span class="hidden-tablet"> Pengaturan Taman</span><span class="label label-important"> 3 </span></a>
                 <ul style="display: none;">
                     <li><a class="submenu" href="createtaman.php"><i class="icon-picture"></i><span class="hidden-tablet"> Create Taman</span></a>
                     </li>
@@ -20,11 +20,11 @@
                 </ul>
             </li>
             <li>
-                <a class="dropmenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> CRUD Instansi</span><span class="label label-important"> 3 </span></a>
+                <a class="dropmenu" href="#"><i class="icon-file-alt"></i><span class="hidden-tablet"> Pengaturan Instansi</span><span class="label label-important"> 3 </span></a>
                 <ul style="display: none;">
                     <li><a class="submenu" href="createinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Create Instansi</span></a>
                     </li>
-                    <li><a class="submenu" href="readinstansi.php"><i class="icon-picture"></i><span class="hidden-tablet"> Read Instansi</span></a>
+                    <li><a class="submenu" href="readinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Read Instansi</span></a>
                     </li>                    
                     <li><a class="submenu" href="updateinstansi.php"><i class="icon-file-alt"></i><span class="hidden-tablet"> Update Instansi</span></a>
                     </li>
