@@ -51,6 +51,12 @@ body a{
 	-o-transition: .5s all;
 	-ms-transition: .5s all;
 }
+.titlelogo > a
+{
+	color: #fff;
+	text-decoration: none;
+}
+
 .titlelogo
 {
 	padding-top: 30px;

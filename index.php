@@ -111,7 +111,7 @@
             <div class="col-md-4 grid1" style="padding-left:75px">
                 <a href="#">
                     <a href="kirimaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <a href="kirimaduan.php"><h3>mengadu</h3></a>
+                    <a href="kirimaduan.php"><h3>Mengadu</h3></a>
                     <div class="look">
                         <ul>
                             <li>
@@ -126,7 +126,7 @@
             <div class="col-md-4 grid2" style="padding-left:75px">
                 <a href="#">
                     <a href="cariaduan.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <a href="cariaduan.php"><h3>mencari</h3></a>
+                    <a href="cariaduan.php"><h3>Mencari</h3></a>
                     <div class="look1">
                         <ul>
                             <li>
@@ -141,7 +141,7 @@
             <div class="col-md-4 grid3" style="padding-left:75px">
                 <a href="#">
                     <a href="daftartaman.php"><img src="images/img1.jpg" class="img-responsive" alt="" /></a>
-                    <a href="daftartaman.php"><h3>lihat taman</h3></a>
+                    <a href="daftartaman.php"><h3>Melihat</h3></a>
                     <div class="look2">
                         <ul>
                             <li>

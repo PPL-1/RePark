@@ -18,7 +18,6 @@
 			header('Location: message.php');
 	    }
 	} else {
-		echo ("<script type='text/javascript'>alert('Username atau password error cuk');</script>");
 		header('Location: index.php');
 	}
 	$conn->close();
