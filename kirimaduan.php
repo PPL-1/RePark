@@ -77,8 +77,8 @@
                     <input type="text" placeholder="Nomor Telepon (0xxxxxxxxxxx)" required="true" id="no_telp" name="no_telp">
                     <input type="text" placeholder="Judul Aduan" required="true" id="judul" name="judul">
                     <div class="controls" style="font-size:18px;margin-bottom:1em">
-                        <select data-placeholder="" id="selectError2" data-rel="chosen" name="lokasi">
-                        <option value="Masukkan Taman"></option>
+                        <select data-placeholder="" id="selectError2" data-rel="chosen" name="lokasi" required="true">
+                        <option value=""></option>
                         <?php 
                               $conn = getConnection();
                             $id = $_GET['id'];
@@ -91,7 +91,7 @@
                                     echo "<option>".$row['NamaTaman']."</option>";
                                 }
                             } else {
-                                echo ("<script type='text/javascript'>alert('Error cuk');</script>");
+                                echo ("<script type='text/javascript'>alert('Error');</script>");
                             }
                          ?>
                       </select>
@@ -132,7 +132,6 @@
 <script type="text/javascript">
 function is_no_telp_valid()
 {
-    alert("hai");
     var no_telp = document.forms["kirim_adu"]["no_telp"].value;
     var regex = /(0([0-9])+)/;
     if(!no_telp.match(regex))
