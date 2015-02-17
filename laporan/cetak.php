@@ -7,9 +7,6 @@ function printLaporan($startdate, $finishdate, $instansi='')
 	$koneksi 	= getConnection();
 	if($instansi == '')
 	{
-		// $query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-		// 			FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi != ''";
-
 		$query 		= "SELECT Judul, Lokasi, Nama, Pengaduan.Tanggal as TanggalPengaduan, Instansi, Telepon, Status, Pengaduan.Isi as IsiPengaduan, Jawaban.Tanggal as TanggalJawaban, Jawaban.Isi as IsiJawaban
 					FROM Pengaduan LEFT JOIN Jawaban ON Pengaduan.Id = Jawaban.IdPengaduan 
 					WHERE Pengaduan.Tanggal BETWEEN '".$startdate."' AND '".$finishdate."'";
@@ -21,8 +18,6 @@ function printLaporan($startdate, $finishdate, $instansi='')
 					FROM Pengaduan LEFT JOIN Jawaban ON Pengaduan.Id = Jawaban.IdPengaduan 
 					WHERE Pengaduan.Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi = '".$instansi."'";
 
-		// $query 		= "SELECT Judul, Lokasi, Nama, Tanggal, Instansi, Telepon, Status, Isi 
-		// 			FROM Pengaduan  WHERE Tanggal BETWEEN '".$startdate."' AND '".$finishdate."' AND Instansi = '".$instansi."'";
 	}
 	
 	$result 	= getResultFromQuery($koneksi, $query);
@@ -80,7 +75,7 @@ function printLaporan($startdate, $finishdate, $instansi='')
 			
 			if(!is_null($row['IsiJawaban']))
 			{
-				$Jawaban 	= 'Jawaban 	: <br>'.$row['IsiJawaban'].'<br>';
+				$Jawaban 	= '<br><br><b>Jawaban 	: </b><br>'.$row['IsiJawaban'].'<br>';
 				$TanggalJawaban = 'Dijawab tanggal : '.$row['TanggalJawaban'];
 				$html = $judul.$lokasi.$nama.$tanggal.$instansi.$telepon.$isi.$status.$Jawaban.$TanggalJawaban;
 			}

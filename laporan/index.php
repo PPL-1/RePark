@@ -1,10 +1,14 @@
 <?php
 	ini_set('display_errors', 1);
+	
+	if(!isset($_COOKIE["Username"])) {
+    	header('Location: ../Instansi/index.php');
+	}
+	
 	require '../database/config.php';
 	require ('cetak.php');
 	$startdate 	= $_GET['startdate'];
 	$finishdate = $_GET['finishdate'];
-//	$instansi 	= $_GET['instansi'];
 
 	if(isset($_GET['instansi']) && !empty($_GET['instansi']))
 	{
