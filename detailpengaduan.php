@@ -126,8 +126,8 @@ $id = $_GET['id'];
                 ?>
                 <hr>
 				<?php
-                        $query = "SELECT * FROM Jawaban WHERE Id=".$row['Id'];
-                        //$query = "SELECT * FROM Jawaban WHERE IdPengaduan=".$row['Id'];
+                        //$query = "SELECT * FROM Jawaban WHERE Id=".$row['Id'];
+                        $query = "SELECT * FROM Jawaban WHERE IdPengaduan=".$row['Id'];
                         $q_result = mysqli_query($conn,$query);
                         if (!$q_result) 
                         {
