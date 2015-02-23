@@ -6,7 +6,8 @@
 
 	$query = $_GET["query"];
 
-	$sql = "SELECT * FROM Pengaduan WHERE Judul LIKE '%".$query."%' LIMIT 5";
+	$sql = "SELECT * FROM Pengaduan WHERE (Judul LIKE '%".$query."%' OR Lokasi LIKE '%".$query."%' OR Nama LIKE '%".$query."%' OR Isi LIKE '%".$query."%') LIMIT 5";
+	//$sql = "SELECT * FROM Pengaduan WHERE Judul LIKE '%".$query."%' LIMIT 5";
 	$result = $conn->query($sql);
 	if ($result->num_rows > 0) {
 	    // output data of each row
