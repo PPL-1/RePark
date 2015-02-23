@@ -92,7 +92,6 @@ function printLaporan($startdate, $finishdate, $instansi='')
 	else
 	{
 		echo "<script type='text/javascript'>alert('Data pengaduan tidak ditemukan. Periksa kembali input anda');</script>";
-		header('Location: ../Admin/printreport.php');
 	}
 
 	closeConnection($koneksi);
